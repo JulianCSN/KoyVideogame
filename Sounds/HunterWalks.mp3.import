@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/HunterWalks.mp3-dd293293d5b429ab3c9ee33f10f003d3.mp3str"
+
+[deps]
+
+source_file="res://Sounds/HunterWalks.mp3"
+dest_files=[ "res://.import/HunterWalks.mp3-dd293293d5b429ab3c9ee33f10f003d3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

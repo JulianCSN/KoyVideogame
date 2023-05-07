@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cinematic-battle-percussion-hero-action-boom-drums-music-21042.mp3-b61981a6749d0713d0c8c610680408a7.mp3str"
+
+[deps]
+
+source_file="res://Sounds/cinematic-battle-percussion-hero-action-boom-drums-music-21042.mp3"
+dest_files=[ "res://.import/cinematic-battle-percussion-hero-action-boom-drums-music-21042.mp3-b61981a6749d0713d0c8c610680408a7.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

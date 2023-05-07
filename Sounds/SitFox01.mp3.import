@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/SitFox01.mp3-7dd381ea226fc1db5082eccb9f8daf71.mp3str"
+
+[deps]
+
+source_file="res://Sounds/SitFox01.mp3"
+dest_files=[ "res://.import/SitFox01.mp3-7dd381ea226fc1db5082eccb9f8daf71.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

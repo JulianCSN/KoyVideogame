@@ -1,0 +1,2136 @@
+[gd_scene load_steps=125 format=2]
+
+[ext_resource path="res://Sounds/drone-007wav-14863.mp3" type="AudioStream" id=1]
+[ext_resource path="res://Sounds/overmorrow-138798.mp3" type="AudioStream" id=2]
+[ext_resource path="res://KoySoul.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/ChapterOneP8.gd" type="Script" id=4]
+[ext_resource path="res://Images/light.png" type="Texture" id=5]
+[ext_resource path="res://Sounds/light-switch-turn-on-47753.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Sounds/jumpscare1.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Images/foxyJumpscare.jpg" type="Texture" id=8]
+[ext_resource path="res://Characters/KoySoul/Jumping_Small_Iceball_14x41.png" type="Texture" id=9]
+[ext_resource path="res://Sounds/heartbeat-89bpm-34936.mp3" type="AudioStream" id=10]
+[ext_resource path="res://FontText/upheavtt.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://Sounds/appear-2-88047.mp3" type="AudioStream" id=12]
+[ext_resource path="res://Sounds/dog_bark_light_agressive-83242.mp3" type="AudioStream" id=13]
+[ext_resource path="res://Sounds/sinus-bomb-137068.mp3" type="AudioStream" id=14]
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ -8.739 ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "volumen"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 8 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ -80.0, -80.0, -8.739 ]
+}
+
+[sub_resource type="DynamicFont" id=86]
+size = 20
+font_data = ExtResource( 11 )
+
+[sub_resource type="Animation" id=87]
+resource_name = "APPEAR"
+length = 13.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 8, 9, 13 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=89]
+resource_name = "Dissapear"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=88]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=90]
+extents = Vector2( 97.5, 10 )
+
+[sub_resource type="OccluderPolygon2D" id=140]
+polygon = PoolVector2Array( 1900, -545, 2022, -545, 2022, 2062, -1949, 2060, -1949, -1919, -1829, -1918, -1829, -1647, -1347, -1648, -1347, -1310, -1657, -1311, -1657, -1627, -1828, -1627, -1829, -447, -1667, -447, -1667, -611, -1357, -611, -1357, -273, -1668, -273, -1668, -411, -1829, -411, -1829, 834, -976, 834, -976, 877, -1829, 877, -1829, 1006, -1829, 1007, -978, 1007, -979, 1299, -1063, 1299, -1063, 1051, -1482, 1051, -1482, 1453, -1576, 1453, -1576, 1051, -1829, 1051, -1829, 1942, -1430, 1942, -1429, 1942, -1430, 1941, -1429, 1941, -1429, 1692, -1199, 1692, -1198, 1508, -574, 1509, -574, 1601, -1115, 1601, -1115, 1750, -1345, 1750, -1345, 1941, -919, 1941, -919, 1726, -834, 1726, -835, 1941, -698, 1941, -698, 1727, 625, 1727, 625, 1582, 395, 1581, 395, 1496, 939, 1496, 939, 1581, 897, 1581, 893, 1581, 710, 1582, 710, 1727, 939, 1727, 938, 1941, 1152, 1941, 1152, 1623, 1374, 1623, 1374, 1524, 1458, 1524, 1458, 1814, 1374, 1814, 1374, 1708, 1236, 1708, 1237, 1941, 1902, 1941, 1901, 434, 1669, 434, 1669, 385, 1901, 385 )
+
+[sub_resource type="OccluderPolygon2D" id=139]
+polygon = PoolVector2Array( 1218, 319, 1304, 319, 1305, 609, 1219, 609 )
+
+[sub_resource type="OccluderPolygon2D" id=141]
+polygon = PoolVector2Array( 1598, 1664, 1683, 1664, 1683, 1386, 1911, 1386, 1911, 1337, 1599, 1337 )
+
+[sub_resource type="OccluderPolygon2D" id=142]
+polygon = PoolVector2Array( -474, -198, -430, -198, -429, -621, -62, -619, -62, -411, -293, -411, -293, -367, -62, -367, -62, -176, 560, -177, 560, -221, -18, -221, -18, -367, 1170, -367, 1170, -411, -18, -411, -18, -664, -474, -663 )
+
+[sub_resource type="OccluderPolygon2D" id=143]
+polygon = PoolVector2Array( 1640, -13, 1726, -13, 1726, 278, 1640, 278 )
+
+[sub_resource type="OccluderPolygon2D" id=144]
+polygon = PoolVector2Array( -1675, 348, -1365, 348, -1365, 685, -1675, 685 )
+
+[sub_resource type="OccluderPolygon2D" id=145]
+polygon = PoolVector2Array( -1207, -98, -897, -99, -897, -436, -1021, -436, -1021, -605, -883, -605, -883, -942, -1193, -942, -1193, -605, -1053, -605, -1053, -435, -1207, -435 )
+
+[sub_resource type="OccluderPolygon2D" id=146]
+polygon = PoolVector2Array( -1660, -790, -1350, -790, -1350, -1126, -1491, -1126, -1491, -1318, -1524, -1318, -1523, -1316, -1523, -1126, -1660, -1126 )
+
+[sub_resource type="OccluderPolygon2D" id=147]
+polygon = PoolVector2Array( -359, 1393, -359, 1478, 186, 1478, 186, 1393 )
+
+[sub_resource type="OccluderPolygon2D" id=148]
+polygon = PoolVector2Array( -871, 1327, -871, 1413, -631, 1413, -631, 1327 )
+
+[sub_resource type="OccluderPolygon2D" id=149]
+polygon = PoolVector2Array( -525, 1271, -440, 1271, -440, 981, -524, 981 )
+
+[sub_resource type="OccluderPolygon2D" id=150]
+polygon = PoolVector2Array( -820, 548, -820, 592, -398, 592, -398, 548 )
+
+[sub_resource type="OccluderPolygon2D" id=151]
+polygon = PoolVector2Array( 668, -134, 752, -134, 752, -274, 668, -274 )
+
+[sub_resource type="OccluderPolygon2D" id=152]
+polygon = PoolVector2Array( 1299, -140, 1384, -140, 1385, -381, 1639, -381, 1639, -430, 1300, -430 )
+
+[sub_resource type="OccluderPolygon2D" id=153]
+polygon = PoolVector2Array( 1723, -394, 1807, -394, 1807, -140, 1723, -140 )
+
+[sub_resource type="OccluderPolygon2D" id=154]
+polygon = PoolVector2Array( 1203, 857, 1203, 941, 1493, 941, 1493, 857 )
+
+[sub_resource type="OccluderPolygon2D" id=155]
+polygon = PoolVector2Array( 1391, 1033, 1390, 1118, 1681, 1118, 1681, 828, 1597, 828, 1597, 1034 )
+
+[sub_resource type="OccluderPolygon2D" id=156]
+polygon = PoolVector2Array( 1443, 308, 1528, 308, 1527, 550, 1755, 550, 1755, 598, 1443, 598 )
+
+[sub_resource type="OccluderPolygon2D" id=157]
+polygon = PoolVector2Array( -1750, 1444, -1666, 1444, -1666, 1154, -1750, 1154 )
+
+[sub_resource type="OccluderPolygon2D" id=158]
+polygon = PoolVector2Array( -1391, 1146, -1151, 1146, -1151, 1230, -1306, 1230, -1306, 1574, -1390, 1574 )
+
+[sub_resource type="OccluderPolygon2D" id=14]
+polygon = PoolVector2Array( 394, 123, 549, 123, 549, 145, 446, 145, 446, 467, 766, 467, 766, 149, 661, 149, 661, 126, 817, 126, 817, 515, 394, 515 )
+
+[sub_resource type="OccluderPolygon2D" id=159]
+polygon = PoolVector2Array( -722, -318, -621, -318, -622, -783, -13, -781, -13, -949, -622, -948, -621, -1182, -723, -1182 )
+
+[sub_resource type="OccluderPolygon2D" id=160]
+polygon = PoolVector2Array( 137, -532, 1923, -531, 1922, -1898, 145, -1897, 145, -1975, -1948, -1975, -1949, -1855, -1118, -1855, -1118, -1597, -962, -1597, -962, -1855, -750, -1855, -750, -1391, -594, -1391, -594, -1855, 137, -1855, 137, -1257, -452, -1257, -452, -1091, 137, -1091 )
+
+[sub_resource type="OccluderPolygon2D" id=174]
+polygon = PoolVector2Array( -1333, 1507, -1333, 1574, -1185, 1574, -1185, 1508 )
+
+[sub_resource type="OccluderPolygon2D" id=94]
+polygon = PoolVector2Array( 166, -78, 166, -32, 1041, -32, 1041, 58, 1528, 58, 1529, 13, 1086, 13, 1087, -78 )
+
+[sub_resource type="OccluderPolygon2D" id=95]
+polygon = PoolVector2Array( 1041, 175, 1528, 175, 1528, 219, 1086, 219, 1087, 798, 1041, 798 )
+
+[sub_resource type="OccluderPolygon2D" id=105]
+polygon = PoolVector2Array( 428, 1263, 422, 1278, 420, 1294, 422, 1310, 428, 1325, 438, 1338, 451, 1348, 466, 1354, 482, 1356, 498, 1354, 513, 1348, 526, 1338, 536, 1325, 542, 1310, 544, 1294, 542, 1278, 536, 1263, 526, 1250, 513, 1240, 498, 1234, 482, 1232, 466, 1234, 451, 1240, 438, 1250 )
+
+[sub_resource type="OccluderPolygon2D" id=137]
+polygon = PoolVector2Array( -149, 23, 149.688, 23, 149.688, -23, -149, -21 )
+
+[sub_resource type="OccluderPolygon2D" id=138]
+polygon = PoolVector2Array( -23, -7, 21, -7, 21, 415, -23, 415 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 25.4375, 184.656 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 210.5, 23.5 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 25, 182.5 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 77.25, 11 )
+
+[sub_resource type="RectangleShape2D" id=91]
+extents = Vector2( 437.75, 22.5 )
+
+[sub_resource type="RectangleShape2D" id=92]
+extents = Vector2( 311.375, 22.5 )
+
+[sub_resource type="RectangleShape2D" id=97]
+extents = Vector2( 149.688, 22.5 )
+
+[sub_resource type="RectangleShape2D" id=98]
+extents = Vector2( 211.344, 22.5 )
+
+[sub_resource type="RectangleShape2D" id=106]
+extents = Vector2( 168.672, 155.25 )
+
+[sub_resource type="RectangleShape2D" id=111]
+extents = Vector2( 683.418, 893.313 )
+
+[sub_resource type="RectangleShape2D" id=112]
+extents = Vector2( 101.668, 16.125 )
+
+[sub_resource type="RectangleShape2D" id=113]
+extents = Vector2( 10.334, 90.5625 )
+
+[sub_resource type="RectangleShape2D" id=114]
+extents = Vector2( 17.667, 131.781 )
+
+[sub_resource type="RectangleShape2D" id=107]
+extents = Vector2( 432.5, 50.75 )
+
+[sub_resource type="RectangleShape2D" id=108]
+extents = Vector2( 83.75, 312.438 )
+
+[sub_resource type="RectangleShape2D" id=115]
+extents = Vector2( 280.875, 78.2188 )
+
+[sub_resource type="RectangleShape2D" id=116]
+extents = Vector2( 181.438, 78.2188 )
+
+[sub_resource type="RectangleShape2D" id=99]
+extents = Vector2( 244.172, 22.5 )
+
+[sub_resource type="RectangleShape2D" id=117]
+extents = Vector2( 311.293, 22.5 )
+
+[sub_resource type="RectangleShape2D" id=118]
+extents = Vector2( 731.646, 22.5 )
+
+[sub_resource type="CircleShape2D" id=100]
+radius = 62.1289
+
+[sub_resource type="CircleShape2D" id=101]
+radius = 194.579
+
+[sub_resource type="RectangleShape2D" id=119]
+extents = Vector2( 42.5859, 145.375 )
+
+[sub_resource type="RectangleShape2D" id=120]
+extents = Vector2( 42.5859, 127.594 )
+
+[sub_resource type="RectangleShape2D" id=121]
+extents = Vector2( 42.5859, 70.5938 )
+
+[sub_resource type="RectangleShape2D" id=122]
+extents = Vector2( 42.5859, 70.5938 )
+
+[sub_resource type="RectangleShape2D" id=123]
+extents = Vector2( 818.646, 145.375 )
+
+[sub_resource type="RectangleShape2D" id=124]
+extents = Vector2( 157.896, 28.6875 )
+
+[sub_resource type="RectangleShape2D" id=125]
+extents = Vector2( 42.5859, 121.188 )
+
+[sub_resource type="RectangleShape2D" id=126]
+extents = Vector2( 42.5859, 214.094 )
+
+[sub_resource type="RectangleShape2D" id=127]
+extents = Vector2( 42.5859, 119.688 )
+
+[sub_resource type="RectangleShape2D" id=128]
+extents = Vector2( 42.5859, 272.344 )
+
+[sub_resource type="RectangleShape2D" id=129]
+extents = Vector2( 42.5859, 113.336 )
+
+[sub_resource type="RectangleShape2D" id=130]
+extents = Vector2( 24.793, 156.668 )
+
+[sub_resource type="RectangleShape2D" id=131]
+extents = Vector2( 24.793, 170.334 )
+
+[sub_resource type="RectangleShape2D" id=132]
+extents = Vector2( 312.293, 46.375 )
+
+[sub_resource type="RectangleShape2D" id=109]
+extents = Vector2( 431.672, 22.5 )
+
+[sub_resource type="RectangleShape2D" id=110]
+extents = Vector2( 430.836, 22.5 )
+
+[sub_resource type="RectangleShape2D" id=133]
+extents = Vector2( 46.959, 203.688 )
+
+[sub_resource type="RectangleShape2D" id=134]
+extents = Vector2( 1046.5, 60.25 )
+
+[sub_resource type="RectangleShape2D" id=135]
+extents = Vector2( 1870.5, 60.25 )
+
+[sub_resource type="RectangleShape2D" id=136]
+extents = Vector2( 1989.75, 60.25 )
+
+[sub_resource type="RectangleShape2D" id=104]
+extents = Vector2( 1302, 60.25 )
+
+[sub_resource type="RectangleShape2D" id=96]
+extents = Vector2( 220.844, 21.75 )
+
+[sub_resource type="RectangleShape2D" id=162]
+extents = Vector2( 220.844, 22.375 )
+
+[sub_resource type="RectangleShape2D" id=163]
+extents = Vector2( 67.7969, 22.75 )
+
+[sub_resource type="RectangleShape2D" id=173]
+extents = Vector2( 74.5, 33.25 )
+
+[sub_resource type="RectangleShape2D" id=161]
+extents = Vector2( 50, 61.5 )
+
+[sub_resource type="RectangleShape2D" id=164]
+extents = Vector2( 239, 217 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 82, 14, 41 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 9 )
+region = Rect2( 14, 82, 14, 41 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 9 )
+region = Rect2( 28, 82, 14, 41 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 9 )
+region = Rect2( 42, 82, 14, 41 )
+
+[sub_resource type="SpriteFrames" id=75]
+animations = [ {
+"frames": [ SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 78 ), SubResource( 77 ) ],
+"loop": true,
+"name": "idle",
+"speed": 7.0
+} ]
+
+[sub_resource type="Animation" id=80]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.85 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:texture_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.38 ]
+}
+
+[sub_resource type="Animation" id=81]
+resource_name = "beat"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.85, 1.18 ]
+}
+
+[sub_resource type="CircleShape2D" id=82]
+radius = 1.33325
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.4 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "latencia"
+length = 2.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 1, 1.4, 1.7, 2, 2.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 2.0, 1.5, 1.3, 1.5, 2.0, 1.5, 1.3, 1.5 ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:texture_scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.56 ]
+}
+
+[sub_resource type="Animation" id=10]
+resource_name = "onOff"
+length = 4.5
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 3, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.09, 0.09, 0.56, 0.56 ]
+}
+
+[sub_resource type="DynamicFont" id=83]
+size = 20
+outline_size = 1
+outline_color = Color( 0.286275, 0, 0, 1 )
+extra_spacing_char = 2
+font_data = ExtResource( 11 )
+
+[sub_resource type="Animation" id=84]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.580392, 0, 0, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../../AudioDespierta:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=85]
+resource_name = "despierta"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5.6, 5.8, 7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.580392, 0, 0, 0 ), Color( 0.580392, 0, 0, 0 ), Color( 0.580392, 0, 0, 1 ), Color( 0.580392, 0, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=165]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=166]
+resource_name = "apear"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="DynamicFont" id=170]
+size = 20
+font_data = ExtResource( 11 )
+
+[sub_resource type="Animation" id=171]
+resource_name = "Letras"
+length = 50.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("KoyHabla3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 15, 16, 18, 19 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KoyHabla4:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 21, 22, 24, 25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KoyHabla8:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 9, 10.1, 11.1, 12.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KoyHabla5:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 27, 28, 29, 30 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KoyHabla6:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 32, 33, 34, 35 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("KoyHabla7:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 37, 38, 39, 40 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=172]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("KoyHabla3:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KoyHabla4:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KoyHabla8:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KoyHabla5:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("KoyHabla6:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("KoyHabla7:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "iniciar"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0.5, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0.0901961, 0, 0, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=169]
+size = 60
+font_data = ExtResource( 11 )
+
+[sub_resource type="Animation" id=167]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.133333, 0.133333, 0.133333, 0 ) ]
+}
+
+[sub_resource type="Animation" id=168]
+resource_name = "appear"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Label:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 5, 8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.133333, 0.133333, 0.133333, 0 ), Color( 0.133333, 0.133333, 0.133333, 1 ) ]
+}
+
+[node name="ChapterOneP8" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="AudioMiedoFondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -19.226
+autoplay = true
+
+[node name="AudioMiedoMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -8.739
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AudioMiedoMusic"]
+autoplay = "volumen"
+anims/RESET = SubResource( 7 )
+anims/volumen = SubResource( 8 )
+
+[node name="AudioOnLights" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = 3.496
+pitch_scale = 0.63
+
+[node name="AudioJumpScare1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -33.681
+pitch_scale = 1.6
+
+[node name="AudioDespierta" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+pitch_scale = 1.24
+
+[node name="AudioFinalPerro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -16.605
+pitch_scale = 0.93
+
+[node name="AudioFinalBomb" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+volume_db = -6.118
+
+[node name="FondoNegro" type="ColorRect" parent="."]
+visible = false
+margin_left = -7724.0
+margin_top = -5359.0
+margin_right = 10079.0
+margin_bottom = 6029.0
+color = Color( 0.0470588, 0.0470588, 0.0470588, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Flecha1" type="ColorRect" parent="."]
+modulate = Color( 0.0392157, 0.0392157, 0.0392157, 1 )
+margin_left = 1381.0
+margin_top = 1364.0
+margin_right = 1444.0
+margin_bottom = 1370.0
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Flecha2" type="ColorRect" parent="Flecha1"]
+margin_right = 15.0
+margin_bottom = 4.0
+rect_rotation = -40.0
+
+[node name="Flecha3" type="ColorRect" parent="Flecha1"]
+margin_left = 2.6
+margin_top = 2.9
+margin_right = 17.6
+margin_bottom = 6.9
+rect_rotation = 40.0
+
+[node name="BloodContainer" type="Container" parent="."]
+modulate = Color( 0.662745, 0, 0, 1 )
+margin_left = -1145.0
+margin_top = 976.0
+margin_right = -1105.0
+margin_bottom = 1016.0
+
+[node name="Blood" type="ColorRect" parent="BloodContainer"]
+modulate = Color( 0.141176, 0, 0, 1 )
+margin_right = 7.0
+margin_bottom = 7.0
+rect_rotation = 180.0
+
+[node name="Blood2" type="ColorRect" parent="BloodContainer/Blood"]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 11.0
+margin_bottom = 14.0
+
+[node name="Blood3" type="ColorRect" parent="BloodContainer/Blood"]
+margin_left = 12.0
+margin_top = -1.0
+margin_right = 15.0
+margin_bottom = 2.0
+
+[node name="Blood5" type="ColorRect" parent="BloodContainer/Blood"]
+margin_left = 11.0
+margin_top = 5.0
+margin_right = 14.0
+margin_bottom = 8.0
+
+[node name="Blood4" type="ColorRect" parent="BloodContainer/Blood"]
+margin_left = 8.0
+margin_top = -5.0
+margin_right = 10.0
+margin_bottom = -3.0
+
+[node name="Blood2" type="ColorRect" parent="BloodContainer"]
+modulate = Color( 0.141176, 0, 0, 1 )
+margin_left = -76.0
+margin_top = -53.0
+margin_right = -69.0
+margin_bottom = -46.0
+rect_rotation = 180.0
+
+[node name="Blood2" type="ColorRect" parent="BloodContainer/Blood2"]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 11.0
+margin_bottom = 14.0
+
+[node name="Blood3" type="ColorRect" parent="BloodContainer/Blood2"]
+margin_left = 12.0
+margin_top = -1.0
+margin_right = 15.0
+margin_bottom = 2.0
+
+[node name="Blood5" type="ColorRect" parent="BloodContainer/Blood2"]
+margin_left = 11.0
+margin_top = 5.0
+margin_right = 14.0
+margin_bottom = 8.0
+
+[node name="Blood4" type="ColorRect" parent="BloodContainer/Blood2"]
+margin_left = 8.0
+margin_top = -5.0
+margin_right = 10.0
+margin_bottom = -3.0
+
+[node name="Blood3" type="ColorRect" parent="BloodContainer"]
+modulate = Color( 0.141176, 0, 0, 1 )
+margin_left = -150.0
+margin_top = 2.0
+margin_right = -143.0
+margin_bottom = 9.0
+rect_rotation = 180.0
+
+[node name="Blood2" type="ColorRect" parent="BloodContainer/Blood3"]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 11.0
+margin_bottom = 14.0
+
+[node name="Blood3" type="ColorRect" parent="BloodContainer/Blood3"]
+margin_left = 12.0
+margin_top = -1.0
+margin_right = 15.0
+margin_bottom = 2.0
+
+[node name="Blood5" type="ColorRect" parent="BloodContainer/Blood3"]
+margin_left = 11.0
+margin_top = 5.0
+margin_right = 14.0
+margin_bottom = 8.0
+
+[node name="Blood4" type="ColorRect" parent="BloodContainer/Blood3"]
+margin_left = 8.0
+margin_top = -5.0
+margin_right = 10.0
+margin_bottom = -3.0
+
+[node name="Blood4" type="ColorRect" parent="BloodContainer"]
+modulate = Color( 0.141176, 0, 0, 1 )
+margin_left = -250.0
+margin_top = -51.0
+margin_right = -243.0
+margin_bottom = -44.0
+rect_rotation = 180.0
+
+[node name="Blood2" type="ColorRect" parent="BloodContainer/Blood4"]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 11.0
+margin_bottom = 14.0
+
+[node name="Blood3" type="ColorRect" parent="BloodContainer/Blood4"]
+margin_left = 12.0
+margin_top = -1.0
+margin_right = 15.0
+margin_bottom = 2.0
+
+[node name="Blood5" type="ColorRect" parent="BloodContainer/Blood4"]
+margin_left = 11.0
+margin_top = 5.0
+margin_right = 14.0
+margin_bottom = 8.0
+
+[node name="Blood4" type="ColorRect" parent="BloodContainer/Blood4"]
+margin_left = 8.0
+margin_top = -5.0
+margin_right = 10.0
+margin_bottom = -3.0
+
+[node name="Blood5" type="ColorRect" parent="BloodContainer"]
+modulate = Color( 0.141176, 0, 0, 1 )
+margin_left = -338.0
+margin_top = -1.0
+margin_right = -331.0
+margin_bottom = 6.0
+rect_rotation = 180.0
+
+[node name="Blood2" type="ColorRect" parent="BloodContainer/Blood5"]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 11.0
+margin_bottom = 14.0
+
+[node name="Blood3" type="ColorRect" parent="BloodContainer/Blood5"]
+margin_left = 12.0
+margin_top = -1.0
+margin_right = 15.0
+margin_bottom = 2.0
+
+[node name="Blood5" type="ColorRect" parent="BloodContainer/Blood5"]
+margin_left = 11.0
+margin_top = 5.0
+margin_right = 14.0
+margin_bottom = 8.0
+
+[node name="Blood4" type="ColorRect" parent="BloodContainer/Blood5"]
+margin_left = 8.0
+margin_top = -5.0
+margin_right = 10.0
+margin_bottom = -3.0
+
+[node name="Blood6" type="ColorRect" parent="BloodContainer"]
+modulate = Color( 0.141176, 0, 0, 1 )
+margin_left = -421.0
+margin_top = -48.0
+margin_right = -414.0
+margin_bottom = -41.0
+rect_rotation = 180.0
+
+[node name="Blood2" type="ColorRect" parent="BloodContainer/Blood6"]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 11.0
+margin_bottom = 14.0
+
+[node name="Blood3" type="ColorRect" parent="BloodContainer/Blood6"]
+margin_left = 12.0
+margin_top = -1.0
+margin_right = 15.0
+margin_bottom = 2.0
+
+[node name="Blood5" type="ColorRect" parent="BloodContainer/Blood6"]
+margin_left = 11.0
+margin_top = 5.0
+margin_right = 14.0
+margin_bottom = 8.0
+
+[node name="Blood4" type="ColorRect" parent="BloodContainer/Blood6"]
+margin_left = 8.0
+margin_top = -5.0
+margin_right = 10.0
+margin_bottom = -3.0
+
+[node name="Blood7" type="ColorRect" parent="BloodContainer"]
+modulate = Color( 0.141176, 0, 0, 1 )
+margin_left = -510.0
+margin_top = 4.0
+margin_right = -503.0
+margin_bottom = 11.0
+rect_rotation = 180.0
+
+[node name="Blood2" type="ColorRect" parent="BloodContainer/Blood7"]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 11.0
+margin_bottom = 14.0
+
+[node name="Blood3" type="ColorRect" parent="BloodContainer/Blood7"]
+margin_left = 12.0
+margin_top = -1.0
+margin_right = 15.0
+margin_bottom = 2.0
+
+[node name="Blood5" type="ColorRect" parent="BloodContainer/Blood7"]
+margin_left = 11.0
+margin_top = 5.0
+margin_right = 14.0
+margin_bottom = 8.0
+
+[node name="Blood4" type="ColorRect" parent="BloodContainer/Blood7"]
+margin_left = 8.0
+margin_top = -5.0
+margin_right = 10.0
+margin_bottom = -3.0
+
+[node name="Blood8" type="ColorRect" parent="BloodContainer"]
+modulate = Color( 0.141176, 0, 0, 1 )
+margin_left = 82.0
+margin_top = -54.0
+margin_right = 89.0
+margin_bottom = -47.0
+rect_rotation = 180.0
+
+[node name="Blood2" type="ColorRect" parent="BloodContainer/Blood8"]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 11.0
+margin_bottom = 14.0
+
+[node name="Blood3" type="ColorRect" parent="BloodContainer/Blood8"]
+margin_left = 12.0
+margin_top = -1.0
+margin_right = 15.0
+margin_bottom = 2.0
+
+[node name="Blood5" type="ColorRect" parent="BloodContainer/Blood8"]
+margin_left = 11.0
+margin_top = 5.0
+margin_right = 14.0
+margin_bottom = 8.0
+
+[node name="Blood4" type="ColorRect" parent="BloodContainer/Blood8"]
+margin_left = 8.0
+margin_top = -5.0
+margin_right = 10.0
+margin_bottom = -3.0
+
+[node name="Blood9" type="ColorRect" parent="BloodContainer"]
+modulate = Color( 0.141176, 0, 0, 1 )
+margin_left = 171.0
+margin_top = -4.0
+margin_right = 178.0
+margin_bottom = 3.0
+rect_rotation = 180.0
+
+[node name="Blood2" type="ColorRect" parent="BloodContainer/Blood9"]
+margin_left = 7.0
+margin_top = 10.0
+margin_right = 11.0
+margin_bottom = 14.0
+
+[node name="Blood3" type="ColorRect" parent="BloodContainer/Blood9"]
+margin_left = 12.0
+margin_top = -1.0
+margin_right = 15.0
+margin_bottom = 2.0
+
+[node name="Blood5" type="ColorRect" parent="BloodContainer/Blood9"]
+margin_left = 11.0
+margin_top = 5.0
+margin_right = 14.0
+margin_bottom = 8.0
+
+[node name="Blood4" type="ColorRect" parent="BloodContainer/Blood9"]
+margin_left = 8.0
+margin_top = -5.0
+margin_right = 10.0
+margin_bottom = -3.0
+
+[node name="LabelMoverte" type="Label" parent="."]
+margin_left = 494.0
+margin_top = 442.0
+margin_right = 796.0
+margin_bottom = 460.0
+custom_fonts/font = SubResource( 86 )
+text = "Usa                  para moverte"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LabelMoverte2" type="Label" parent="LabelMoverte"]
+modulate = Color( 1, 0.34902, 0.34902, 1 )
+margin_left = 54.0
+margin_right = 356.0
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 86 )
+text = "W, A , S, D"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LabelMoverte"]
+autoplay = "APPEAR"
+anims/APPEAR = SubResource( 87 )
+anims/Dissapear = SubResource( 89 )
+anims/RESET = SubResource( 88 )
+
+[node name="AreaMoverte" type="Area2D" parent="LabelMoverte"]
+position = Vector2( -494, -442 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LabelMoverte/AreaMoverte"]
+position = Vector2( 638, 111 )
+shape = SubResource( 90 )
+
+[node name="Laberinto" type="StaticBody2D" parent="."]
+
+[node name="LightOccluder2D23" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( 39, -1 )
+occluder = SubResource( 140 )
+
+[node name="LightOccluder2D22" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( 39, -1 )
+occluder = SubResource( 139 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 141 )
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 142 )
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 143 )
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 144 )
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+position = Vector2( 4, -481 )
+occluder = SubResource( 144 )
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+position = Vector2( 464, -273 )
+occluder = SubResource( 144 )
+
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+position = Vector2( 489, -1802 )
+occluder = SubResource( 144 )
+
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+position = Vector2( 1299, -2104 )
+occluder = SubResource( 144 )
+
+[node name="LightOccluder2D9" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 145 )
+
+[node name="LightOccluder2D10" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 146 )
+
+[node name="LightOccluder2D11" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 147 )
+
+[node name="LightOccluder2D12" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 148 )
+
+[node name="LightOccluder2D13" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 149 )
+
+[node name="LightOccluder2D14" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+position = Vector2( -256, -86 )
+occluder = SubResource( 149 )
+
+[node name="LightOccluder2D15" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 150 )
+
+[node name="LightOccluder2D16" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 151 )
+
+[node name="LightOccluder2D17" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+position = Vector2( 186, -4 )
+occluder = SubResource( 151 )
+
+[node name="LightOccluder2D18" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+position = Vector2( 912, -924 )
+rotation = 1.5708
+occluder = SubResource( 151 )
+
+[node name="LightOccluder2D19" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 152 )
+
+[node name="LightOccluder2D20" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 153 )
+
+[node name="LightOccluder2D23" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+position = Vector2( -610, 1636 )
+occluder = SubResource( 153 )
+
+[node name="LightOccluder2D21" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 154 )
+
+[node name="LightOccluder2D22" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 155 )
+
+[node name="LightOccluder2D24" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 156 )
+
+[node name="LightOccluder2D25" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 157 )
+
+[node name="LightOccluder2D26" type="LightOccluder2D" parent="Laberinto/LightOccluder2D22"]
+occluder = SubResource( 158 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( 39, -1 )
+occluder = SubResource( 14 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Laberinto/LightOccluder2D"]
+occluder = SubResource( 159 )
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Laberinto/LightOccluder2D"]
+occluder = SubResource( 160 )
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="Laberinto/LightOccluder2D"]
+occluder = SubResource( 174 )
+
+[node name="LightOccluder2D2" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( 39, -1 )
+occluder = SubResource( 94 )
+
+[node name="LightOccluder2D3" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( 39, -1 )
+occluder = SubResource( 95 )
+
+[node name="LightOccluder2D4" type="LightOccluder2D" parent="Laberinto"]
+occluder = SubResource( 105 )
+
+[node name="LightOccluder2D5" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( 404, -50 )
+occluder = SubResource( 105 )
+
+[node name="LightOccluder2D6" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( 656, -230 )
+occluder = SubResource( 105 )
+
+[node name="LightOccluder2D8" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( 388, -316 )
+occluder = SubResource( 105 )
+
+[node name="LightOccluder2D9" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( 130, -240 )
+occluder = SubResource( 105 )
+
+[node name="LightOccluder2D10" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( -151, -292 )
+occluder = SubResource( 105 )
+
+[node name="LightOccluder2D11" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( 42, -464 )
+occluder = SubResource( 105 )
+
+[node name="LightOccluder2D12" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( 290, -543 )
+occluder = SubResource( 105 )
+
+[node name="LightOccluder2D13" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( -483, -640 )
+occluder = SubResource( 105 )
+
+[node name="LightOccluder2D14" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( -1525, -670 )
+occluder = SubResource( 105 )
+
+[node name="LightOccluder2D7" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( -1518, -2948 )
+scale = Vector2( 3.1, 3.1 )
+occluder = SubResource( 105 )
+
+[node name="LightOccluder2D15" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( 228, 116.313 )
+rotation = 1.5708
+occluder = SubResource( 137 )
+
+[node name="LightOccluder2D16" type="LightOccluder2D" parent="Laberinto"]
+occluder = SubResource( 138 )
+
+[node name="LightOccluder2D17" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( -208, -252 )
+occluder = SubResource( 138 )
+
+[node name="LightOccluder2D18" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( -414, -30 )
+occluder = SubResource( 138 )
+
+[node name="LightOccluder2D19" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( -204, 352 )
+occluder = SubResource( 138 )
+
+[node name="LightOccluder2D20" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( 229, 376 )
+occluder = SubResource( 138 )
+
+[node name="LightOccluder2D21" type="LightOccluder2D" parent="Laberinto"]
+position = Vector2( -656, -199 )
+occluder = SubResource( 138 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 459, 329 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 644.5, 490 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 830, 330.5 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 510.75, 133 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 778, 137 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 643, -56 )
+shape = SubResource( 91 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1103, 485.375 )
+rotation = 1.5708
+shape = SubResource( 92 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 228, 116.313 )
+rotation = 1.5708
+shape = SubResource( 97 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 228, 580.656 )
+rotation = 1.5708
+shape = SubResource( 98 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1, 204 )
+rotation = 1.5708
+shape = SubResource( 98 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -205, 556 )
+rotation = 1.5708
+shape = SubResource( 98 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -415, 174 )
+rotation = 1.5708
+shape = SubResource( 98 )
+
+[node name="CollisionShape2D38" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1481, 516 )
+rotation = 1.5708
+shape = SubResource( 106 )
+
+[node name="CollisionShape2D39" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1477, 35 )
+rotation = 1.5708
+shape = SubResource( 106 )
+
+[node name="CollisionShape2D40" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1017, 242 )
+rotation = 1.5708
+shape = SubResource( 106 )
+
+[node name="CollisionShape2D41" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1013, -268 )
+rotation = 1.5708
+shape = SubResource( 106 )
+
+[node name="CollisionShape2D50" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1068.69, -1215.42 )
+rotation = 1.5708
+shape = SubResource( 111 )
+
+[node name="CollisionShape2D42" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1473, -443 )
+rotation = 1.5708
+shape = SubResource( 106 )
+
+[node name="CollisionShape2D43" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -999, -774 )
+rotation = 1.5708
+shape = SubResource( 106 )
+
+[node name="CollisionShape2D44" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1466, -959 )
+rotation = 1.5708
+shape = SubResource( 106 )
+
+[node name="CollisionShape2D45" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -992, -1287 )
+rotation = 1.5708
+shape = SubResource( 106 )
+
+[node name="CollisionShape2D88" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1468, -1218 )
+rotation = 1.5708
+shape = SubResource( 112 )
+
+[node name="CollisionShape2D94" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1706, -1638 )
+rotation = 1.5708
+shape = SubResource( 113 )
+
+[node name="CollisionShape2D89" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -998, -518 )
+rotation = 1.5708
+shape = SubResource( 112 )
+
+[node name="CollisionShape2D90" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1709.78, -429.667 )
+rotation = 1.5708
+shape = SubResource( 114 )
+
+[node name="CollisionShape2D87" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -182, -1589 )
+rotation = 1.5708
+shape = SubResource( 106 )
+
+[node name="CollisionShape2D47" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -633, -750.5 )
+rotation = 1.5708
+shape = SubResource( 107 )
+
+[node name="CollisionShape2D48" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -286.438, -866 )
+rotation = 1.5708
+shape = SubResource( 108 )
+
+[node name="CollisionShape2D91" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -101, -1175 )
+rotation = 1.5708
+shape = SubResource( 108 )
+
+[node name="CollisionShape2D92" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -633, -1673 )
+rotation = 1.5708
+shape = SubResource( 115 )
+
+[node name="CollisionShape2D93" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1001, -1779 )
+rotation = 1.5708
+shape = SubResource( 116 )
+
+[node name="CollisionShape2D46" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1463, -1480 )
+rotation = 1.5708
+shape = SubResource( 106 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -209, -48 )
+rotation = 1.5708
+shape = SubResource( 98 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -0.999999, -420.828 )
+rotation = 1.5708
+shape = SubResource( 99 )
+
+[node name="CollisionShape2D51" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 287.707, -199 )
+shape = SubResource( 117 )
+
+[node name="CollisionShape2D52" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 477.354, -390 )
+shape = SubResource( 118 )
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 524, 830 )
+rotation = 1.5708
+shape = SubResource( 100 )
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 870, 978 )
+rotation = 1.5708
+shape = SubResource( 100 )
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 772, 751 )
+rotation = 1.5708
+shape = SubResource( 100 )
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 612, 1054 )
+rotation = 1.5708
+shape = SubResource( 100 )
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 331, 1002 )
+rotation = 1.5708
+shape = SubResource( 100 )
+
+[node name="CollisionShape2D60" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1043, 624 )
+rotation = 1.5708
+shape = SubResource( 100 )
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -24, 1064 )
+rotation = 1.5708
+shape = SubResource( 101 )
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1, 654 )
+rotation = 1.5708
+shape = SubResource( 100 )
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 886, 1244 )
+rotation = 1.5708
+shape = SubResource( 100 )
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1138, 1064 )
+rotation = 1.5708
+shape = SubResource( 100 )
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 482, 1294 )
+rotation = 1.5708
+shape = SubResource( 100 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -413, -410 )
+rotation = 1.5708
+shape = SubResource( 98 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -657, 6 )
+rotation = 1.5708
+shape = SubResource( 98 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -570, 569 )
+shape = SubResource( 98 )
+
+[node name="CollisionShape2D53" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1348, 1836 )
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D55" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -982, 1153 )
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D61" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -699, 1039 )
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D64" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -838, 1871 )
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D66" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1233, 1797 )
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D95" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1194, 1368 )
+shape = SubResource( 120 )
+
+[node name="CollisionShape2D96" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 707, 1682 )
+shape = SubResource( 120 )
+
+[node name="CollisionShape2D67" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1455, 1668 )
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D68" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1680, 1518 )
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D69" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1575, 1075 )
+rotation = 1.5708
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D97" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1387, 898 )
+rotation = 1.5708
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D70" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1678, 972 )
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D71" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1524, 452 )
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D72" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1300, 463 )
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D73" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1722, 131 )
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D74" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1804, -286 )
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D84" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 749, -205 )
+shape = SubResource( 121 )
+
+[node name="CollisionShape2D85" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 935, -209 )
+shape = SubResource( 121 )
+
+[node name="CollisionShape2D86" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1155, -215 )
+rotation = 1.5708
+shape = SubResource( 122 )
+
+[node name="CollisionShape2D75" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1381, -286 )
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D76" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 159, 1871 )
+shape = SubResource( 123 )
+
+[node name="CollisionShape2D65" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1232.9, 1720 )
+shape = SubResource( 124 )
+
+[node name="CollisionShape2D62" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -443, 1125 )
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D56" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1118, 1627.81 )
+shape = SubResource( 125 )
+
+[node name="CollisionShape2D59" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1309, 1358.91 )
+shape = SubResource( 126 )
+
+[node name="CollisionShape2D57" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1669, 1298 )
+shape = SubResource( 119 )
+
+[node name="CollisionShape2D58" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1232, 1187 )
+rotation = 1.5708
+shape = SubResource( 127 )
+
+[node name="CollisionShape2D63" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -712, 1369 )
+rotation = 1.5708
+shape = SubResource( 127 )
+
+[node name="CollisionShape2D77" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -47, 1435 )
+rotation = 1.5708
+shape = SubResource( 128 )
+
+[node name="CollisionShape2D78" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 706, 1538 )
+rotation = 1.5708
+shape = SubResource( 128 )
+
+[node name="CollisionShape2D79" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1303.66, 1665 )
+rotation = 1.5708
+shape = SubResource( 129 )
+
+[node name="CollisionShape2D80" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1794.33, 1361 )
+rotation = 1.5708
+shape = SubResource( 130 )
+
+[node name="CollisionShape2D81" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1638, 573 )
+rotation = 1.5708
+shape = SubResource( 130 )
+
+[node name="CollisionShape2D82" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1865, 409 )
+rotation = 1.5708
+shape = SubResource( 130 )
+
+[node name="CollisionShape2D83" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1508.67, -406 )
+rotation = 1.5708
+shape = SubResource( 131 )
+
+[node name="CollisionShape2D54" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -847, 1554 )
+shape = SubResource( 132 )
+
+[node name="CollisionShape2D36" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1368.67, 854 )
+shape = SubResource( 109 )
+
+[node name="CollisionShape2D37" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1369.84, 1028 )
+shape = SubResource( 110 )
+
+[node name="CollisionShape2D49" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1490, 1249 )
+shape = SubResource( 133 )
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -224, -642 )
+shape = SubResource( 98 )
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -862.5, -1916 )
+shape = SubResource( 134 )
+
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 71.5, 2000 )
+shape = SubResource( 135 )
+
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1850, 70.249 )
+rotation = 1.5708
+shape = SubResource( 136 )
+
+[node name="CollisionShape2D35" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 2000, 756 )
+rotation = 1.5708
+shape = SubResource( 104 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1346, 196 )
+shape = SubResource( 96 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1346, 34.625 )
+shape = SubResource( 162 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( 1102.75, -10.7969 )
+rotation = 1.5708
+shape = SubResource( 163 )
+
+[node name="CollisionShape2D98" type="CollisionShape2D" parent="Laberinto"]
+position = Vector2( -1220, 1539.75 )
+shape = SubResource( 173 )
+
+[node name="Screamer1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Screamer1"]
+position = Vector2( -1735, 941 )
+shape = SubResource( 161 )
+
+[node name="Lentitud1" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lentitud1"]
+position = Vector2( -1558, 1723 )
+shape = SubResource( 164 )
+
+[node name="Key1" type="Area2D" parent="."]
+position = Vector2( -1589, 1761 )
+scale = Vector2( 3, 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Key1"]
+stream = ExtResource( 10 )
+volume_db = 6.992
+pitch_scale = 1.58
+autoplay = true
+max_distance = 800.0
+attenuation = 1.41421
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Key1"]
+position = Vector2( 0, 10 )
+frames = SubResource( 75 )
+animation = "idle"
+frame = 5
+playing = true
+
+[node name="Light2D" type="Light2D" parent="Key1"]
+position = Vector2( 0.666656, 0.333336 )
+texture = ExtResource( 5 )
+texture_scale = 0.38
+color = Color( 0, 0.898039, 0.941176, 1 )
+energy = 0.85
+shadow_enabled = true
+shadow_filter = 4
+shadow_filter_smooth = 2.9
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Key1/Light2D"]
+autoplay = "beat"
+anims/RESET = SubResource( 80 )
+anims/beat = SubResource( 81 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Key1"]
+position = Vector2( 0, 0.333336 )
+shape = SubResource( 82 )
+
+[node name="KoySoul" parent="." instance=ExtResource( 3 )]
+modulate = Color( 0.745098, 0.745098, 0.745098, 1 )
+position = Vector2( 647, 314 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Light2D" type="Light2D" parent="KoySoul"]
+texture = ExtResource( 5 )
+texture_scale = 0.56
+color = Color( 1, 0, 0, 1 )
+energy = 0.0
+shadow_enabled = true
+shadow_filter = 4
+shadow_filter_smooth = 2.9
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="KoySoul/Light2D"]
+anims/RESET = SubResource( 6 )
+anims/latencia = SubResource( 5 )
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="KoySoul/Light2D"]
+anims/RESET = SubResource( 9 )
+anims/onOff = SubResource( 10 )
+
+[node name="Jumpscare" type="TextureRect" parent="KoySoul"]
+visible = false
+modulate = Color( 0.376471, 0, 0, 1 )
+margin_left = -116.833
+margin_top = -64.6667
+margin_right = 1163.17
+margin_bottom = 655.333
+rect_scale = Vector2( 0.18, 0.18 )
+texture = ExtResource( 8 )
+
+[node name="LabelDespierta" type="Label" parent="KoySoul"]
+modulate = Color( 0.580392, 0, 0, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -61.0
+margin_top = -9.0
+margin_right = 61.0
+margin_bottom = 9.0
+custom_fonts/font = SubResource( 83 )
+text = "DESPIERTA"
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="KoySoul/LabelDespierta"]
+autoplay = "despierta"
+anims/RESET = SubResource( 84 )
+anims/despierta = SubResource( 85 )
+
+[node name="Camera2D" type="Camera2D" parent="KoySoul"]
+current = true
+limit_smoothed = true
+smoothing_enabled = true
+smoothing_speed = 4.0
+
+[node name="LuzPotente" type="ColorRect" parent="KoySoul"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -173.0
+margin_top = -116.0
+margin_right = 171.0
+margin_bottom = 139.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="KoySoul/LuzPotente"]
+anims/RESET = SubResource( 165 )
+anims/apear = SubResource( 166 )
+
+[node name="KoyHabla" type="Label" parent="KoySoul"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -13.5
+margin_top = 42.6667
+margin_right = 46.5
+margin_bottom = 60.6667
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 170 )
+align = 1
+
+[node name="KoyHabla3" type="Label" parent="KoySoul/KoyHabla"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -160.667
+margin_top = -68.0
+margin_right = -56.6667
+margin_bottom = -50.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 170 )
+text = "¿estoy muerto?"
+align = 1
+
+[node name="KoyHabla8" type="Label" parent="KoySoul/KoyHabla"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 78.6667
+margin_top = -10.6667
+margin_right = 182.667
+margin_bottom = 7.33334
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 170 )
+text = "¿Dónde estoy?"
+align = 1
+
+[node name="KoyHabla4" type="Label" parent="KoySoul/KoyHabla"]
+modulate = Color( 1, 1, 1, 0 )
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 114.0
+margin_top = -198.667
+margin_right = 253.0
+margin_bottom = -180.667
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 170 )
+text = "¿esto es el cielo?"
+align = 1
+
+[node name="KoyHabla5" type="Label" parent="KoySoul/KoyHabla"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -30.0
+margin_top = -70.6667
+margin_right = 109.0
+margin_bottom = -52.6667
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 170 )
+text = "Me siento extraño"
+align = 1
+
+[node name="KoyHabla6" type="Label" parent="KoySoul/KoyHabla"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -174.0
+margin_top = -35.0
+margin_right = -2.0
+margin_bottom = -17.0
+rect_scale = Vector2( 0.9, 0.9 )
+custom_fonts/font = SubResource( 170 )
+text = "NECESITO ENCONTRARLA"
+align = 1
+
+[node name="KoyHabla7" type="Label" parent="KoySoul/KoyHabla"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -167.0
+margin_top = -187.667
+margin_right = 18.0
+margin_bottom = -169.667
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 170 )
+text = "NECESITO SALIR DE AQUI"
+align = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="KoySoul/KoyHabla"]
+autoplay = "Letras"
+anims/Letras = SubResource( 171 )
+anims/RESET = SubResource( 172 )
+
+[node name="PantallaInicial" type="ColorRect" parent="."]
+margin_left = -2534.0
+margin_top = -1424.0
+margin_right = 4030.0
+margin_bottom = 2431.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PantallaInicial"]
+autoplay = "iniciar"
+anims/RESET = SubResource( 1 )
+anims/iniciar = SubResource( 2 )
+
+[node name="PantallaFinal" type="ColorRect" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -2695.0
+margin_top = 750.0
+margin_right = -210.0
+margin_bottom = 2800.0
+
+[node name="Label" type="Label" parent="PantallaFinal"]
+modulate = Color( 0.133333, 0.133333, 0.133333, 0 )
+margin_left = 728.0
+margin_top = 1165.0
+margin_right = 1181.0
+margin_bottom = 1219.0
+custom_fonts/font = SubResource( 169 )
+text = "CONTINUARÁ . . ."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PantallaFinal"]
+anims/RESET = SubResource( 167 )
+anims/appear = SubResource( 168 )
+
+[connection signal="area_entered" from="LabelMoverte/AreaMoverte" to="." method="_on_AreaMoverte_area_entered"]
+[connection signal="area_entered" from="Screamer1" to="." method="_on_Screamer1_area_entered"]
+[connection signal="area_entered" from="Lentitud1" to="." method="_on_Lentitud1_area_entered"]
+[connection signal="area_exited" from="Lentitud1" to="." method="_on_Lentitud1_area_exited"]
+[connection signal="area_entered" from="Key1" to="." method="_on_Key1_area_entered"]

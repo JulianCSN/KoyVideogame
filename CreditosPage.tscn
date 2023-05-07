@@ -1,0 +1,283 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://GUI/Icons_Essential_v1.0/Icons_Essential_v1.0/Spritesheet/icons_essential_without_outline_color1.png" type="Texture" id=1]
+[ext_resource path="res://GUI/GUI_Essential_v1.0_[Free]/GUI_Essential_v1.0_[Free]/Spritesheet/gui_flat.png" type="Texture" id=2]
+[ext_resource path="res://FontText/PixelFJVerdana12pt.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Scripts/CreditosPage.gd" type="Script" id=4]
+[ext_resource path="res://Images/pixil-frame-0 (3).png" type="Texture" id=5]
+[ext_resource path="res://Images/LogoKoyV2.png" type="Texture" id=6]
+[ext_resource path="res://Images/SimpleLineForLogo.png" type="Texture" id=7]
+[ext_resource path="res://Sounds/click-21156.mp3" type="AudioStream" id=8]
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 170, 136, 34, 34 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 3 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://FontText/pixelart.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = SubResource( 7 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 546, 196, 26, 28 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.54902, 0.239216, 0.239216, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.286275, 0.0313726, 0.0313726, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+anti_aliasing_size = 0.2
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.54902, 0.239216, 0.239216, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.654902, 0, 0, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 1, 0.27451, 0.27451, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.654902, 0, 0, 1 )
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="Theme" id=13]
+VScrollBar/styles/grabber = SubResource( 11 )
+VScrollBar/styles/grabber_highlight = SubResource( 12 )
+VScrollBar/styles/grabber_pressed = SubResource( 14 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 8
+extra_spacing_char = 1
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 3 )
+
+[node name="CreditosPage" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="Click01" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -4.0
+pitch_scale = 1.2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -361.5
+margin_top = -231.0
+margin_right = 361.5
+margin_bottom = 231.0
+color = Color( 0.219608, 0, 0.00392157, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -349.0
+margin_top = -220.0
+margin_right = 349.0
+margin_bottom = 220.0
+color = Color( 0.137255, 0.0431373, 0.0666667, 1 )
+
+[node name="EngranajeDibujo" type="AnimatedSprite" parent="ColorRect/ColorRect2"]
+position = Vector2( 256, 38.5 )
+scale = Vector2( 2.2353, 2.26471 )
+frames = SubResource( 4 )
+animation = "New Anim"
+
+[node name="LbOpciones" type="Label" parent="ColorRect/ColorRect2"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -69.0
+margin_top = 16.0
+margin_right = 115.0
+margin_bottom = 43.0
+custom_fonts/font = SubResource( 5 )
+text = "CREDITOS"
+
+[node name="BtnSettingsExit" type="Button" parent="ColorRect/ColorRect2"]
+margin_left = 632.0
+margin_top = 6.0
+margin_right = 692.0
+margin_bottom = 61.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+flat = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="exit" type="AnimatedSprite" parent="ColorRect/ColorRect2/BtnSettingsExit"]
+position = Vector2( 28.0001, 34 )
+scale = Vector2( 2.5, 2.5 )
+frames = SubResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LogoSkitGames" type="TextureRect" parent="ColorRect/ColorRect2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -98.0
+margin_top = -152.0
+margin_right = -34.0
+margin_bottom = -88.0
+rect_scale = Vector2( 3, 3 )
+texture = ExtResource( 5 )
+
+[node name="KoyLogo" type="TextureRect" parent="ColorRect/ColorRect2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -45.0
+margin_top = -166.0
+margin_right = 255.0
+margin_bottom = 34.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 6 )
+
+[node name="KoyLogo2" type="TextureRect" parent="ColorRect/ColorRect2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 34.0
+margin_top = -163.0
+margin_right = 334.0
+margin_bottom = 37.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="KoyLogo3" type="TextureRect" parent="ColorRect/ColorRect2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -123.0
+margin_top = -163.0
+margin_right = 177.0
+margin_bottom = 37.0
+rect_scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 7 )
+
+[node name="ColorRect4Labels" type="ColorRect" parent="ColorRect/ColorRect2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -337.0
+margin_top = -228.0
+margin_right = 337.0
+margin_bottom = -13.0
+color = Color( 0.137255, 0.0431373, 0.0666667, 1 )
+
+[node name="RichTextLabelCredits" type="RichTextLabel" parent="ColorRect/ColorRect2/ColorRect4Labels"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -196.0
+margin_top = -189.0
+margin_right = 226.0
+margin_bottom = 1.0
+theme = SubResource( 13 )
+custom_fonts/normal_font = SubResource( 10 )
+text = "----------------- A   G A M E   B Y ----------------- 
+
+* José Julián Rodríguez Cisneros
+
+------------ S C R E E N W R I T E R S ------------
+
+* José Julián Rodríguez Cisneros
+* Evelyn Dayana Rodríguez Cisneros
+* Arnoldo Cisneros Arreola
+
+--------------- P R O G R A M E R S ---------------
+
+* José Julián Rodríguez Cisneros
+
+----------------------- A R T ------------------------
+
+* José Julián Rodríguez Cisneros
+* SeethingSwarm
+* ConcernedApe
+
+---------------------- M U S I C ---------------------
+
+* Lexin_Music
+
+-------------------- T E S T E R S -------------------
+
+* AleLovesMei
+* Siobhan Jesús Martínez Martínez 
+* Diego Emanuel Martínez Terriquez
+* Gerardo Montelón Ramírez
+* Felipe Olivo Pelayo
+
+------------ S P E C I A L   T H A N K S  -----------
+
+* Universidad De Colima
+* Lepe Salazar Francisco Ivan
+* Pixabay"
+deselect_on_focus_loss_enabled = false
+
+[node name="LabelSkitgames" type="Label" parent="ColorRect/ColorRect2/ColorRect4Labels"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -83.0
+margin_top = -25.0
+margin_right = 79.0
+margin_bottom = 11.0
+custom_fonts/font = SubResource( 8 )
+text = "Skit Games"
+align = 1
+valign = 1
+
+[connection signal="pressed" from="ColorRect/ColorRect2/BtnSettingsExit" to="." method="_on_BtnSettingsExit_pressed"]

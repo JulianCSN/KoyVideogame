@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/truck-driving-steady.mp3-3e6a3959dc05b91ed7ef389b90db6387.mp3str"
+
+[deps]
+
+source_file="res://Sounds/truck-driving-steady.mp3"
+dest_files=[ "res://.import/truck-driving-steady.mp3-3e6a3959dc05b91ed7ef389b90db6387.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

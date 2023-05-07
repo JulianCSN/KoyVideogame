@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/drone-007wav-14863.mp3-481e68b426aa9e3e5f75b2e214414efc.mp3str"
+
+[deps]
+
+source_file="res://Sounds/drone-007wav-14863.mp3"
+dest_files=[ "res://.import/drone-007wav-14863.mp3-481e68b426aa9e3e5f75b2e214414efc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

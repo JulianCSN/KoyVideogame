@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/crickets-and-frogs-continuous-loop-13163.mp3-a93b64a0c0049fb638a5b5adaa915562.mp3str"
+
+[deps]
+
+source_file="res://Sounds/crickets-and-frogs-continuous-loop-13163.mp3"
+dest_files=[ "res://.import/crickets-and-frogs-continuous-loop-13163.mp3-a93b64a0c0049fb638a5b5adaa915562.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

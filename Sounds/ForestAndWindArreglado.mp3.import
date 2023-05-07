@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ForestAndWindArreglado.mp3-3df96e12c5708a6ef7bb98a3dc3ee56d.mp3str"
+
+[deps]
+
+source_file="res://Sounds/ForestAndWindArreglado.mp3"
+dest_files=[ "res://.import/ForestAndWindArreglado.mp3-3df96e12c5708a6ef7bb98a3dc3ee56d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

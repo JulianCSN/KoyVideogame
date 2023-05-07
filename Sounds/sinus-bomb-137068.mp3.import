@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sinus-bomb-137068.mp3-c6cc54d0fe4f2d3c8a65e83640a54ee1.mp3str"
+
+[deps]
+
+source_file="res://Sounds/sinus-bomb-137068.mp3"
+dest_files=[ "res://.import/sinus-bomb-137068.mp3-c6cc54d0fe4f2d3c8a65e83640a54ee1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

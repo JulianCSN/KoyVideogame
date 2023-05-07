@@ -1,0 +1,875 @@
+[gd_scene load_steps=67 format=2]
+
+[ext_resource path="res://KoyNoCode.tscn" type="PackedScene" id=1]
+[ext_resource path="res://BG/Free Pixel Art Hill/PNG/Hills Layer 03.png" type="Texture" id=2]
+[ext_resource path="res://BG/Free Pixel Art Forest/PNG/Background layers/Layer_0003_6.png" type="Texture" id=3]
+[ext_resource path="res://BG/Free Pixel Art Forest/PNG/Background layers/Layer_0005_5.png" type="Texture" id=4]
+[ext_resource path="res://BG/Free Pixel Art Hill/PNG/Hills Layer 04.png" type="Texture" id=5]
+[ext_resource path="res://BG/Free Pixel Art Forest/PNG/Background layers/Layer_0004_Lights.png" type="Texture" id=6]
+[ext_resource path="res://BG/Free Pixel Art Forest/PNG/Background layers/Layer_0006_4.png" type="Texture" id=7]
+[ext_resource path="res://BG/Free Pixel Art Forest/PNG/Background layers/Layer_0008_3.png" type="Texture" id=8]
+[ext_resource path="res://BG/Free Pixel Art Hill/PNG/Hills Layer 05.png" type="Texture" id=9]
+[ext_resource path="res://BG/Free Pixel Art Forest/PNG/Background layers/Layer_0009_2.png" type="Texture" id=10]
+[ext_resource path="res://BG/Free Pixel Art Hill/PNG/Hills Layer 02.png" type="Texture" id=11]
+[ext_resource path="res://GUI/Keyboard & Controller Keys/Keyboard Black.png" type="Texture" id=12]
+[ext_resource path="res://Scripts/ChapterOneP4.gd" type="Script" id=13]
+[ext_resource path="res://Characters/Chicken_Sprite_Sheet.png" type="Texture" id=14]
+[ext_resource path="res://Demi.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Sprites/Emogis/Emojis019.webp" type="Texture" id=16]
+[ext_resource path="res://Sprites/Emogis/Emojis007.webp" type="Texture" id=17]
+[ext_resource path="res://Sprites/Emogis/Emojis116.webp" type="Texture" id=18]
+[ext_resource path="res://Images/340269d0d0eebdd.png" type="Texture" id=19]
+[ext_resource path="res://BG/Free Pixel Art Hill/PNG/Hills Layer 06.png" type="Texture" id=20]
+[ext_resource path="res://BG/PixelFantasy_Caves_1.0/rock5.png" type="Texture" id=21]
+[ext_resource path="res://BG/PixelFantasy_Caves_1.0/rock3.png" type="Texture" id=22]
+[ext_resource path="res://BG/PixelFantasy_Caves_1.0/rock2.png" type="Texture" id=23]
+[ext_resource path="res://BG/PixelFantasy_Caves_1.0/rock1.png" type="Texture" id=24]
+[ext_resource path="res://Images/f3a2f262a8e0683.png" type="Texture" id=25]
+[ext_resource path="res://Sounds/ForestAndWindArreglado.mp3" type="AudioStream" id=26]
+[ext_resource path="res://Sprites/Emogis/Emojis017.webp" type="Texture" id=27]
+[ext_resource path="res://Sounds/pop1.mp3" type="AudioStream" id=28]
+[ext_resource path="res://Sounds/stomach.mp3" type="AudioStream" id=29]
+[ext_resource path="res://Sounds/crickets-and-frogs-continuous-loop-13163.mp3" type="AudioStream" id=30]
+[ext_resource path="res://Sounds/light-rain-ambient-114354.mp3" type="AudioStream" id=31]
+[ext_resource path="res://Sounds/upbeat-documentary-116202.mp3" type="AudioStream" id=32]
+[ext_resource path="res://Sprites/Emogis/Emojis022.webp" type="Texture" id=33]
+[ext_resource path="res://Sprites/Emogis/signo-de-exlamacion2-14698569.png" type="Texture" id=34]
+[ext_resource path="res://Sprites/Emogis/Emojis008.webp" type="Texture" id=35]
+[ext_resource path="res://Sprites/Emogis/Emojis006.webp" type="Texture" id=36]
+[ext_resource path="res://Sprites/Emogis/Emojis033.webp" type="Texture" id=37]
+[ext_resource path="res://Sprites/Emogis/Emojis013.webp" type="Texture" id=38]
+[ext_resource path="res://Sprites/Emogis/ef680c30a573972.png" type="Texture" id=39]
+[ext_resource path="res://Sprites/Emogis/Emojis043.webp" type="Texture" id=40]
+[ext_resource path="res://Sprites/Emogis/Emojis036.webp" type="Texture" id=41]
+
+[sub_resource type="Animation" id=155]
+resource_name = "01"
+length = 67.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("KoyNoCode/Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 2, 9, 11, 11.5, 12, 17, 19.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.8, 0.8 ), Vector2( 0.7, 0.7 ), Vector2( 0.7, 0.7 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 0.7, 0.7 ), Vector2( 0.7, 0.7 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KoyNoCode/Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 2, 19.5, 20 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 139, -31 ), Vector2( 139, -31 ), Vector2( -710, -31 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KoyNoCode:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 13.5, 14, 15, 15.5, 17, 17.5, 19, 20.6, 21, 21.5, 22, 22.5, 23, 23.5, 34, 36, 39, 41, 44, 46, 49, 51, 52, 54, 56, 58, 67 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 7211, 599 ), Vector2( 7211, 599 ), Vector2( 7161, 599 ), Vector2( 7161, 599 ), Vector2( 7111, 599 ), Vector2( 7111, 599 ), Vector2( 7061, 599 ), Vector2( 7061, 599 ), Vector2( 7061, 599 ), Vector2( 6861, 599 ), Vector2( 6811, 599 ), Vector2( 6811, 599 ), Vector2( 6761, 599 ), Vector2( 6761, 599 ), Vector2( 6711, 599 ), Vector2( 6711, 599 ), Vector2( 5811, 599 ), Vector2( 5811, 599 ), Vector2( 6911, 599 ), Vector2( 6911, 599 ), Vector2( 5811, 599 ), Vector2( 5811, 599 ), Vector2( 6511, 599 ), Vector2( 6511, 599 ), Vector2( 5611, 599 ), Vector2( 5611, 599 ), Vector2( 6611, 599 ), Vector2( 6611, 599 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Demi:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 18, 18.4, 20, 20.5, 21.5, 22, 22.5, 23, 23.5, 26, 26.5, 32, 34, 38, 40, 43, 45.001, 48, 50, 53, 55, 60, 62, 67 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 5759, 599 ), Vector2( 5759, 599 ), Vector2( 5959, 599 ), Vector2( 5959, 599 ), Vector2( 6009, 599 ), Vector2( 6009, 599 ), Vector2( 6059, 599 ), Vector2( 6059, 599 ), Vector2( 6109, 599 ), Vector2( 6109, 599 ), Vector2( 6109, 599 ), Vector2( 6509, 599 ), Vector2( 6509, 599 ), Vector2( 5609, 599 ), Vector2( 5609, 599 ), Vector2( 7109, 599 ), Vector2( 7109, 599 ), Vector2( 5700, 599 ), Vector2( 5700, 599 ), Vector2( 6700, 599 ), Vector2( 6700, 599 ), Vector2( 5800, 599 ), Vector2( 5800, 599 ), Vector2( 6490, 599 ), Vector2( 6490, 599 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("AreaChicken:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 41, 44 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 6343, 665 ), Vector2( 6143, 665 ) ]
+}
+
+[sub_resource type="Animation" id=156]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("KoyNoCode/Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.8, 0.8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("KoyNoCode/Camera2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 139, -31 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("KoyNoCode:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 7211, 599 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Demi:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 5759, 599 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Demi:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("AreaChicken:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 6343, 665 ) ]
+}
+
+[sub_resource type="AtlasTexture" id=151]
+atlas = ExtResource( 14 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=152]
+atlas = ExtResource( 14 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=153]
+atlas = ExtResource( 14 )
+region = Rect2( 96, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=154]
+atlas = ExtResource( 14 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=147]
+atlas = ExtResource( 14 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=148]
+atlas = ExtResource( 14 )
+region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=149]
+atlas = ExtResource( 14 )
+region = Rect2( 64, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=150]
+atlas = ExtResource( 14 )
+region = Rect2( 96, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=157]
+atlas = ExtResource( 14 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=158]
+atlas = ExtResource( 14 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=159]
+atlas = ExtResource( 14 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=160]
+atlas = ExtResource( 14 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=146]
+animations = [ {
+"frames": [ SubResource( 151 ), SubResource( 152 ), SubResource( 153 ), SubResource( 154 ) ],
+"loop": true,
+"name": "idle",
+"speed": 2.0
+}, {
+"frames": [ SubResource( 147 ), SubResource( 148 ), SubResource( 149 ), SubResource( 150 ) ],
+"loop": false,
+"name": "sit",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 157 ), SubResource( 158 ), SubResource( 159 ), SubResource( 160 ) ],
+"loop": true,
+"name": "walk",
+"speed": 6.0
+} ]
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 12 )
+region = Rect2( 80, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 12 )
+region = Rect2( 80, 128, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=130]
+animations = [ {
+"frames": [ SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="Animation" id=161]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.741176, 0.741176, 0.741176, 0 ) ]
+}
+
+[sub_resource type="Animation" id=162]
+resource_name = "appearCorazon"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.741176, 0.741176, 0.741176, 0 ), Color( 0.741176, 0.741176, 0.741176, 1 ) ]
+}
+
+[sub_resource type="Gradient" id=133]
+offsets = PoolRealArray( 0, 0.430168 )
+colors = PoolColorArray( 0.378906, 0.378906, 0.378906, 1, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=134]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=135]
+resource_name = "disappear"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=136]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=137]
+resource_name = "appear"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="ChapterOneP4" type="Node2D"]
+script = ExtResource( 13 )
+
+[node name="AnimationAllSence" type="AnimationPlayer" parent="."]
+autoplay = "01"
+anims/01 = SubResource( 155 )
+anims/RESET = SubResource( 156 )
+
+[node name="ForestWindAndBirds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 26 )
+volume_db = -0.874
+autoplay = true
+
+[node name="AudioRanas" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 30 )
+volume_db = -38.453
+autoplay = true
+
+[node name="AudioLluvia" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 31 )
+volume_db = -15.748
+autoplay = true
+
+[node name="AudioStomach" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 29 )
+volume_db = -8.739
+pitch_scale = 0.67
+
+[node name="AudioPop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+volume_db = -6.118
+pitch_scale = 1.2
+
+[node name="AudioSongBack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 32 )
+volume_db = -10.895
+
+[node name="rockBG" type="Sprite" parent="."]
+modulate = Color( 0.215686, 0.215686, 0.215686, 1 )
+position = Vector2( 7574, 135 )
+rotation = 3.14159
+scale = Vector2( 5, 5 )
+texture = ExtResource( 22 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="rockBG2" type="Sprite" parent="."]
+modulate = Color( 0.168627, 0.168627, 0.168627, 1 )
+position = Vector2( 7252, 564 )
+rotation = -1.57778
+scale = Vector2( 5, 5 )
+texture = ExtResource( 21 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AreaChicken" type="Area2D" parent="."]
+position = Vector2( 6343, 665 )
+
+[node name="chicken" type="AnimatedSprite" parent="AreaChicken"]
+modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+scale = Vector2( 1.8, 1.8 )
+frames = SubResource( 146 )
+animation = "idle"
+playing = true
+
+[node name="EmojiAdmiracion" type="Sprite" parent="AreaChicken/chicken"]
+visible = false
+modulate = Color( 0.878431, 0.878431, 0.878431, 1 )
+position = Vector2( 0, -31.1111 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 34 )
+
+[node name="EmojiDead" type="Sprite" parent="AreaChicken/chicken"]
+visible = false
+position = Vector2( 0, -31.1111 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 37 )
+
+[node name="EmojiNo" type="Sprite" parent="AreaChicken/chicken"]
+visible = false
+position = Vector2( 0, -31.1111 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 41 )
+
+[node name="EmojiWhats" type="Sprite" parent="AreaChicken/chicken"]
+visible = false
+position = Vector2( 0, -31.1111 )
+scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 39 )
+
+[node name="KoyNoCode" parent="." instance=ExtResource( 1 )]
+modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+position = Vector2( 7211, 599 )
+
+[node name="Camera2D" type="Camera2D" parent="KoyNoCode"]
+position = Vector2( 139, -31 )
+current = true
+zoom = Vector2( 0.8, 0.8 )
+limit_left = 5905
+limit_right = 7400
+limit_bottom = 718
+editor_draw_limits = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="KoyNoCode/Camera2D"]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="KoyNoCode/Camera2D/ParallaxBackground"]
+color = Color( 0.866667, 0.866667, 0.866667, 1 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="KoyNoCode/Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.03, 1 )
+motion_mirroring = Vector2( 1856, 0 )
+
+[node name="Sprite" type="Sprite" parent="KoyNoCode/Camera2D/ParallaxBackground/ParallaxLayer2"]
+modulate = Color( 0.588235, 0.623529, 0.462745, 1 )
+position = Vector2( 928, 44 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+
+[node name="ParallaxLayer13" type="ParallaxLayer" parent="KoyNoCode/Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.2, 1 )
+motion_mirroring = Vector2( 2600, 0 )
+
+[node name="Sprite" type="Sprite" parent="KoyNoCode/Camera2D/ParallaxBackground/ParallaxLayer13"]
+modulate = Color( 0.95, 0.85, 0.55, 1 )
+position = Vector2( 1391, -169 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 8 )
+
+[node name="ParallaxLayer14" type="ParallaxLayer" parent="KoyNoCode/Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.35, 1 )
+motion_mirroring = Vector2( 2600, 0 )
+
+[node name="Sprite" type="Sprite" parent="KoyNoCode/Camera2D/ParallaxBackground/ParallaxLayer14"]
+modulate = Color( 0.733333, 0.654902, 0.411765, 1 )
+position = Vector2( 1307, -169 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 8 )
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="KoyNoCode/Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.7, 1 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="KoyNoCode/Camera2D/ParallaxBackground/ParallaxLayer6"]
+modulate = Color( 0.176471, 0.227451, 0.235294, 1 )
+position = Vector2( 1024, 183 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 11 )
+
+[node name="ParallaxLayer15" type="ParallaxLayer" parent="KoyNoCode/Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.74, 1 )
+motion_mirroring = Vector2( 2600, 0 )
+
+[node name="Sprite" type="Sprite" parent="KoyNoCode/Camera2D/ParallaxBackground/ParallaxLayer15"]
+modulate = Color( 0.266667, 0.266667, 0.266667, 1 )
+position = Vector2( 1604, -343 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 6 )
+
+[node name="ParallaxLayer12" type="ParallaxLayer" parent="KoyNoCode/Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.75, 1 )
+motion_mirroring = Vector2( 2600, 0 )
+
+[node name="Sprite" type="Sprite" parent="KoyNoCode/Camera2D/ParallaxBackground/ParallaxLayer12"]
+modulate = Color( 0.282353, 0.262745, 0.211765, 1 )
+position = Vector2( 1133, -241 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 7 )
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="KoyNoCode/Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.8, 1 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="KoyNoCode/Camera2D/ParallaxBackground/ParallaxLayer5"]
+modulate = Color( 0.113725, 0.168627, 0.121569, 1 )
+position = Vector2( 806, 217 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 11 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="KoyNoCode/Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="KoyNoCode/Camera2D/ParallaxBackground/ParallaxLayer4"]
+modulate = Color( 0.188235, 0.207843, 0.172549, 1 )
+position = Vector2( 1024, 183 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 2 )
+
+[node name="ParallaxLayer11" type="ParallaxLayer" parent="KoyNoCode/Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.92, 1 )
+motion_mirroring = Vector2( 2600, 0 )
+
+[node name="Sprite" type="Sprite" parent="KoyNoCode/Camera2D/ParallaxBackground/ParallaxLayer11"]
+modulate = Color( 0.360784, 0.360784, 0.360784, 1 )
+position = Vector2( 1407, -338 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 6 )
+
+[node name="ParallaxLayer10" type="ParallaxLayer" parent="KoyNoCode/Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.93, 1 )
+motion_mirroring = Vector2( 2600, 0 )
+
+[node name="Sprite" type="Sprite" parent="KoyNoCode/Camera2D/ParallaxBackground/ParallaxLayer10"]
+modulate = Color( 0.0784314, 0.235294, 0.0705882, 1 )
+position = Vector2( 1133, -241 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 4 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="KoyNoCode/Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.95, 1 )
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="KoyNoCode/Camera2D/ParallaxBackground/ParallaxLayer3"]
+modulate = Color( 0.207843, 0.25098, 0.156863, 1 )
+position = Vector2( 1024, 183 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 5 )
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="KoyNoCode/Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.99, 1 )
+
+[node name="Sprite2" type="Sprite" parent="KoyNoCode/Camera2D/ParallaxBackground/ParallaxLayer7"]
+modulate = Color( 0.411765, 0.411765, 0.411765, 1 )
+position = Vector2( 1728, 637 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 19 )
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="KoyNoCode/Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.99, 1 )
+motion_mirroring = Vector2( 2600, 0 )
+
+[node name="Sprite" type="Sprite" parent="KoyNoCode/Camera2D/ParallaxBackground/ParallaxLayer9"]
+modulate = Color( 0.95, 0.85, 0.55, 1 )
+position = Vector2( 1133, -241 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 3 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="KoyNoCode/Camera2D/ParallaxBackground"]
+motion_mirroring = Vector2( 2048, 0 )
+
+[node name="Sprite" type="Sprite" parent="KoyNoCode/Camera2D/ParallaxBackground/ParallaxLayer"]
+position = Vector2( 1024, 208 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+
+[node name="InteractButton" type="Panel" parent="KoyNoCode"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -107.0
+margin_top = -49.0
+margin_right = -67.0
+margin_bottom = -9.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="KoyNoCode/InteractButton"]
+modulate = Color( 0.592157, 1, 0.427451, 1 )
+position = Vector2( 20, 11 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 130 )
+frame = 1
+playing = true
+
+[node name="EmojiHambre" type="Sprite" parent="KoyNoCode"]
+visible = false
+position = Vector2( 28, -44 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 18 )
+
+[node name="Sprite" type="Sprite" parent="KoyNoCode/EmojiHambre"]
+position = Vector2( -62.5, -1.25 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 37 )
+
+[node name="EmojiWow" type="Sprite" parent="KoyNoCode"]
+visible = false
+position = Vector2( -22, -45 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 17 )
+
+[node name="EmojiCute" type="Sprite" parent="KoyNoCode"]
+visible = false
+position = Vector2( -22, -45 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 33 )
+
+[node name="EmojiChiveado" type="Sprite" parent="KoyNoCode"]
+visible = false
+position = Vector2( -22, -45 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 35 )
+
+[node name="EmojiLove" type="Sprite" parent="KoyNoCode"]
+visible = false
+position = Vector2( -22, -45 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 36 )
+
+[node name="EmojiOjitos" type="Sprite" parent="KoyNoCode"]
+visible = false
+position = Vector2( -22, -45 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 16 )
+
+[node name="EmojiLlorar" type="Sprite" parent="KoyNoCode"]
+visible = false
+position = Vector2( -22, -45 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 38 )
+
+[node name="EmojiNojao" type="Sprite" parent="KoyNoCode"]
+visible = false
+position = Vector2( -22, -7 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 27 )
+
+[node name="Demi" parent="." instance=ExtResource( 15 )]
+modulate = Color( 0.788235, 0.788235, 0.788235, 1 )
+position = Vector2( 5759, 599 )
+
+[node name="EmojiCute" type="Sprite" parent="Demi"]
+visible = false
+position = Vector2( 25, -45 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 33 )
+
+[node name="EmojiChiveado" type="Sprite" parent="Demi"]
+visible = false
+position = Vector2( 25, -45 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 35 )
+
+[node name="EmojiLove" type="Sprite" parent="Demi"]
+visible = false
+position = Vector2( 25, -45 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 36 )
+
+[node name="EmojiOjitos" type="Sprite" parent="Demi"]
+visible = false
+position = Vector2( 25, -45 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 16 )
+
+[node name="Corazones" type="Sprite" parent="."]
+modulate = Color( 0.741176, 0.741176, 0.741176, 0 )
+position = Vector2( 6552, 525 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 40 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Corazones"]
+anims/RESET = SubResource( 161 )
+anims/appearCorazon = SubResource( 162 )
+
+[node name="Hojas" type="Sprite" parent="."]
+modulate = Color( 0.458824, 0.458824, 0.458824, 1 )
+position = Vector2( 877, 210 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Hojas2" type="Sprite" parent="Hojas"]
+modulate = Color( 0.458824, 0.458824, 0.458824, 1 )
+position = Vector2( -594.25, 0 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Hojas4" type="Sprite" parent="Hojas"]
+modulate = Color( 0.458824, 0.458824, 0.458824, 1 )
+position = Vector2( 533.25, 0 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Hojas5" type="Sprite" parent="Hojas"]
+modulate = Color( 0.458824, 0.458824, 0.458824, 1 )
+position = Vector2( 1061.75, 0 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Hojas3" type="Sprite" parent="Hojas"]
+modulate = Color( 0.458824, 0.458824, 0.458824, 1 )
+position = Vector2( -1219.25, 1 )
+texture = ExtResource( 20 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="rock1" type="Sprite" parent="."]
+modulate = Color( 0.607843, 0.607843, 0.607843, 1 )
+position = Vector2( 7925, 250 )
+rotation = -3.14159
+scale = Vector2( 3, 3 )
+texture = ExtResource( 24 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="rock3" type="Sprite" parent="."]
+modulate = Color( 0.576471, 0.576471, 0.576471, 1 )
+position = Vector2( 8140, 430 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 23 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+modulate = Color( 0.52549, 0.52549, 0.52549, 0.317647 )
+position = Vector2( 697, -141 )
+amount = 300
+lifetime = 4.2
+speed_scale = 3.94
+texture = ExtResource( 25 )
+emission_shape = 2
+emission_rect_extents = Vector2( 15000, 100 )
+gravity = Vector2( 10, 95 )
+scale_amount = 0.0
+scale_amount_random = 0.09
+color_ramp = SubResource( 133 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="PantallaInical" type="ColorRect" parent="."]
+margin_left = 1955.0
+margin_top = -1798.0
+margin_right = 10024.0
+margin_bottom = 2139.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PantallaInical"]
+autoplay = "disappear"
+anims/RESET = SubResource( 134 )
+anims/disappear = SubResource( 135 )
+
+[node name="PantallaFinal" type="ColorRect" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 2697.0
+margin_top = -2219.0
+margin_right = 10487.0
+margin_bottom = 2654.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PantallaFinal"]
+anims/RESET = SubResource( 136 )
+anims/appear = SubResource( 137 )

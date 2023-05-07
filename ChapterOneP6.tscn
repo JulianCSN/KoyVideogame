@@ -1,0 +1,903 @@
+[gd_scene load_steps=55 format=2]
+
+[ext_resource path="res://Sounds/cinematic-battle-percussion-hero-action-boom-drums-music-21042.mp3" type="AudioStream" id=1]
+[ext_resource path="res://Scripts/ChapterOneP6.gd" type="Script" id=2]
+[ext_resource path="res://BG/country-platform-files/02/parallax_mountain_pack/parallax_mountain_pack/layers/parallax-mountain-bg.png" type="Texture" id=3]
+[ext_resource path="res://BG/country-platform-files/02/parallax_mountain_pack/parallax_mountain_pack/layers/parallax-mountain-mountains.png" type="Texture" id=4]
+[ext_resource path="res://KoyNoCode.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Images/RoadParallax.png" type="Texture" id=6]
+[ext_resource path="res://BG/country-platform-files/02/parallax_mountain_pack/parallax_mountain_pack/layers/parallax-mountain-trees.png" type="Texture" id=7]
+[ext_resource path="res://BG/country-platform-files/02/parallax_mountain_pack/parallax_mountain_pack/layers/parallax-mountain-montain-far.png" type="Texture" id=8]
+[ext_resource path="res://BG/country-platform-files/02/parallax_mountain_pack/parallax_mountain_pack/layers/parallax-mountain-foreground-trees.png" type="Texture" id=9]
+[ext_resource path="res://Images/PosteParallax.png" type="Texture" id=10]
+[ext_resource path="res://Truck01.tscn" type="PackedScene" id=11]
+[ext_resource path="res://FontText/upheavtt.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://GUI/Keyboard & Controller Keys/Keyboard Black.png" type="Texture" id=13]
+[ext_resource path="res://Sounds/truck-driving-steady.mp3" type="AudioStream" id=14]
+[ext_resource path="res://Sounds/LostLevel.mp3" type="AudioStream" id=15]
+[ext_resource path="res://Sprites/AK-47 For Sale.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/9_1.png" type="Texture" id=17]
+[ext_resource path="res://Images/light.png" type="Texture" id=18]
+[ext_resource path="res://Sounds/9mm-pistol-shot-6349.mp3" type="AudioStream" id=19]
+[ext_resource path="res://Sounds/bass-dropmp3-14596.mp3" type="AudioStream" id=20]
+[ext_resource path="res://Sounds/dark-piano-tension-6057.mp3" type="AudioStream" id=21]
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("KoyNoCode:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -94, 611 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "start"
+length = 5.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("KoyNoCode:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 3, 5.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -94, 611 ), Vector2( 80, 611 ) ]
+}
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 17 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="SpriteFrames" id=31]
+animations = [ {
+"frames": [ SubResource( 30 ) ],
+"loop": false,
+"name": "default",
+"speed": 30.0
+} ]
+
+[sub_resource type="Animation" id=17]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1278, 521 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Gun:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 47.6471, 1.17645 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Gun/SmokeFire:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Gun/Light2D:enabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "leave"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1278, 521 ), Vector2( 1258, 521 ), Vector2( 1578, 521 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "shot"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Gun:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 2, 2.1, 2.2, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 11.1764, 5.88232 ), Vector2( -64.1177, 32.9412 ), Vector2( -64.1177, 32.9412 ), Vector2( -46.4706, 26.4706 ), Vector2( -64.1177, 32.9412 ), Vector2( -64.1177, 32.9412 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Gun/SmokeFire:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2, 2.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Gun/Light2D:enabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 2, 2.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+
+[sub_resource type="SegmentShape2D" id=28]
+a = Vector2( 0, -78 )
+b = Vector2( 0, 97 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 100
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_char = 8
+font_data = ExtResource( 12 )
+
+[sub_resource type="Animation" id=14]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "mover"
+length = 2.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.1, 1.1 ) ]
+}
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+skew = Vector2( 1, 0 )
+border_width_left = 8
+border_width_top = 5
+border_width_right = 8
+border_width_bottom = 5
+border_color = Color( 0, 0, 0, 1 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+font_data = ExtResource( 12 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 13 )
+region = Rect2( 80, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 13 )
+region = Rect2( 80, 128, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ SubResource( 6 ), SubResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="DynamicFont" id=16]
+size = 20
+font_data = ExtResource( 12 )
+
+[sub_resource type="Animation" id=10]
+length = 0.001
+
+[sub_resource type="Animation" id=11]
+resource_name = "appear"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.952941 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "dissapear"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 71, 29 ), Vector2( 50, 29 ), Vector2( 1375, 29 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "disappear"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=21]
+size = 60
+extra_spacing_char = 1
+font_data = ExtResource( 12 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+bg_color = Color( 0.34902, 0.0666667, 0.0117647, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.658824, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=25]
+bg_color = Color( 0.45098, 0.0666667, 0.0117647, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.658824, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=26]
+bg_color = Color( 0.34902, 0.0666667, 0.0117647, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.658824, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=27]
+bg_color = Color( 0.25098, 0.0666667, 0.0117647, 1 )
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color( 0.658824, 0, 0, 1 )
+
+[sub_resource type="Theme" id=23]
+Button/colors/font_color_hover = Color( 1, 1, 1, 1 )
+Button/styles/disabled = SubResource( 24 )
+Button/styles/hover = SubResource( 25 )
+Button/styles/normal = SubResource( 26 )
+Button/styles/pressed = SubResource( 27 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 40
+extra_spacing_char = 1
+font_data = ExtResource( 12 )
+
+[sub_resource type="Animation" id=19]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Button:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Button:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "appear"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.823529 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Button:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Button:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[sub_resource type="Animation" id=32]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=33]
+resource_name = "appear"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="ChapterOneP6" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="AnimationAll" type="AnimationPlayer" parent="."]
+autoplay = "start"
+anims/RESET = SubResource( 3 )
+anims/start = SubResource( 4 )
+
+[node name="AudioMusicaFondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -6.991
+autoplay = true
+
+[node name="AudioMusicaPerder" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -4.369
+
+[node name="AudioPianoTension" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+volume_db = -0.33
+
+[node name="AudioBass" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+volume_db = -3.495
+pitch_scale = 0.69
+
+[node name="AudioTruck" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1514, 523 )
+stream = ExtResource( 14 )
+volume_db = -0.721
+autoplay = true
+attenuation = 2.37842
+
+[node name="AudioShot" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1514, 523 )
+stream = ExtResource( 19 )
+volume_db = 4.659
+pitch_scale = 0.54
+attenuation = 1.86607
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0, 1 )
+motion_mirroring = Vector2( 1360, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer8"]
+self_modulate = Color( 0.839216, 0.839216, 0.839216, 1 )
+position = Vector2( 73, 249 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 3 )
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.004, 1 )
+motion_mirroring = Vector2( 1360, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer7"]
+self_modulate = Color( 0.835294, 0.835294, 0.835294, 1 )
+position = Vector2( 1511, 112 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 8 )
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.04, 1 )
+motion_mirroring = Vector2( 2720, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer6"]
+self_modulate = Color( 0.721569, 0.721569, 0.721569, 1 )
+position = Vector2( 1360, 207 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 4 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.15, 1 )
+motion_mirroring = Vector2( 2720, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+modulate = Color( 0.796078, 0.796078, 0.796078, 1 )
+position = Vector2( 552, 193 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 7 )
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+modulate = Color( 0.301961, 0.301961, 0.301961, 1 )
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 2176, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2( 737, 284 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.9, 1 )
+motion_mirroring = Vector2( 2176, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
+modulate = Color( 0.784314, 0.784314, 0.784314, 1 )
+position = Vector2( 1008, 293 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 9 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 1.45, 1 )
+motion_mirroring = Vector2( 1280, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+modulate = Color( 0.329412, 0.25098, 0.329412, 1 )
+position = Vector2( 640, 360 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 1.5, 1 )
+motion_mirroring = Vector2( 1280, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+self_modulate = Color( 0.368627, 0.278431, 0.372549, 1 )
+position = Vector2( 640, 360 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 6 )
+
+[node name="Truck01" parent="." instance=ExtResource( 11 )]
+modulate = Color( 0.505882, 0.403922, 0.509804, 1 )
+position = Vector2( 1278, 521 )
+
+[node name="Gun" type="Area2D" parent="Truck01"]
+position = Vector2( 47.6471, 1.17645 )
+rotation = -0.219911
+scale = Vector2( 0.3, 0.3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Truck01/Gun"]
+position = Vector2( 196.917, 17.8967 )
+rotation = -0.115192
+texture = ExtResource( 16 )
+flip_h = true
+
+[node name="SmokeFire" type="Area2D" parent="Truck01/Gun"]
+visible = false
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Truck01/Gun/SmokeFire"]
+modulate = Color( 0.968627, 0.729412, 0.215686, 0.45098 )
+position = Vector2( -37.6633, 15.6912 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 31 )
+playing = true
+flip_h = true
+
+[node name="Light2D" type="Light2D" parent="Truck01/Gun"]
+position = Vector2( -13.4175, 15.0834 )
+enabled = false
+texture = ExtResource( 18 )
+texture_scale = 2.81
+color = Color( 1, 0.843137, 0, 1 )
+energy = 1.26
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Truck01"]
+anims/RESET = SubResource( 17 )
+anims/leave = SubResource( 18 )
+anims/shot = SubResource( 29 )
+
+[node name="KoyNoCode" parent="." instance=ExtResource( 5 )]
+modulate = Color( 0.796078, 0.796078, 0.796078, 1 )
+position = Vector2( -94, 611 )
+
+[node name="EventoWin" type="Area2D" parent="."]
+position = Vector2( 1048, 618 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EventoWin"]
+shape = SubResource( 28 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 187, 413 )
+current = true
+limit_left = 1
+limit_bottom = 720
+
+[node name="LbSeconds" type="Label" parent="."]
+self_modulate = Color( 0.882353, 0.882353, 0.882353, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 1124.0
+margin_top = 30.0
+margin_right = 1244.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 62, 47 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 13 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="LbSeconds"]
+anims/RESET = SubResource( 14 )
+anims/mover = SubResource( 15 )
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 71.0
+margin_top = 29.0
+margin_right = 883.0
+margin_bottom = 140.0
+custom_styles/panel = SubResource( 9 )
+
+[node name="Info1" type="Label" parent="Panel"]
+self_modulate = Color( 0.882353, 0.882353, 0.882353, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -359.0
+margin_top = -25.0
+margin_right = 359.0
+margin_bottom = 11.0
+custom_fonts/font = SubResource( 5 )
+text = "pulsa       para correr más rápido"
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Panel/Info1"]
+self_modulate = Color( 0.14902, 0.862745, 0, 1 )
+position = Vector2( 169, 14 )
+scale = Vector2( 5, 5 )
+frames = SubResource( 8 )
+frame = 1
+playing = true
+
+[node name="Info2" type="Label" parent="Panel"]
+self_modulate = Color( 0.882353, 0.882353, 0.882353, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 137.0
+margin_top = 19.5
+margin_right = 341.0
+margin_bottom = 37.5
+custom_fonts/font = SubResource( 16 )
+text = "tienes 30 segundos"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Panel"]
+autoplay = "appear"
+anims/RESET = SubResource( 10 )
+anims/appear = SubResource( 11 )
+anims/dissapear = SubResource( 12 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="PantallaInical" type="ColorRect" parent="."]
+margin_left = -2976.0
+margin_top = -1652.0
+margin_right = 5093.0
+margin_bottom = 2285.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PantallaInical"]
+autoplay = "disappear"
+anims/RESET = SubResource( 1 )
+anims/disappear = SubResource( 2 )
+
+[node name="PantallaPerder" type="ColorRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 1286.0
+margin_bottom = 725.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Info1" type="Label" parent="PantallaPerder"]
+self_modulate = Color( 0.882353, 0.882353, 0.882353, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -321.0
+margin_top = -85.0
+margin_right = 321.0
+margin_bottom = -31.0
+custom_fonts/font = SubResource( 21 )
+text = "EL CAMIÓN SE HA IDO"
+
+[node name="Button" type="Button" parent="PantallaPerder"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -167.5
+margin_top = -7.0
+margin_right = 167.5
+margin_bottom = 65.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 23 )
+custom_fonts/font = SubResource( 22 )
+disabled = true
+text = "REINTENTAR"
+icon_align = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PantallaPerder"]
+anims/RESET = SubResource( 19 )
+anims/appear = SubResource( 20 )
+
+[node name="PantallaFinal" type="ColorRect" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -2919.0
+margin_top = -2119.0
+margin_right = 4871.0
+margin_bottom = 2754.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PantallaFinal"]
+anims/RESET = SubResource( 32 )
+anims/appear = SubResource( 33 )
+
+[connection signal="area_entered" from="EventoWin" to="." method="_on_EventoWin_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="pressed" from="PantallaPerder/Button" to="." method="_on_Button_pressed"]

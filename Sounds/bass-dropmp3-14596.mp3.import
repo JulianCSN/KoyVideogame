@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bass-dropmp3-14596.mp3-f341b923de822b34b6d3226eedea5962.mp3str"
+
+[deps]
+
+source_file="res://Sounds/bass-dropmp3-14596.mp3"
+dest_files=[ "res://.import/bass-dropmp3-14596.mp3-f341b923de822b34b6d3226eedea5962.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/night-time-crickets-in-new-jersey-suburbs-19598.mp3-9acadba1b07c07943586d269d38fbfbc.mp3str"
+
+[deps]
+
+source_file="res://Sounds/night-time-crickets-in-new-jersey-suburbs-19598.mp3"
+dest_files=[ "res://.import/night-time-crickets-in-new-jersey-suburbs-19598.mp3-9acadba1b07c07943586d269d38fbfbc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

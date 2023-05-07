@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/light-switch-turn-on-47753.mp3-2bd5e263180b382c9c476a3a5346e126.mp3str"
+
+[deps]
+
+source_file="res://Sounds/light-switch-turn-on-47753.mp3"
+dest_files=[ "res://.import/light-switch-turn-on-47753.mp3-2bd5e263180b382c9c476a3a5346e126.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

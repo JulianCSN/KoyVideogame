@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/FoxCry.mp3-87fcc8df3c5868631da24569fe6d08ea.mp3str"
+
+[deps]
+
+source_file="res://Sounds/FoxCry.mp3"
+dest_files=[ "res://.import/FoxCry.mp3-87fcc8df3c5868631da24569fe6d08ea.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

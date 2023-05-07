@@ -1,0 +1,4 @@
+[gd_scene format=2]
+
+[node name="EnemyDark" type="KinematicBody2D"]
+position = Vector2( 653, 418 )

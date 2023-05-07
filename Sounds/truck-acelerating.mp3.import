@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/truck-acelerating.mp3-d5f46d6ad2e5b2b9f653b4689e980729.mp3str"
+
+[deps]
+
+source_file="res://Sounds/truck-acelerating.mp3"
+dest_files=[ "res://.import/truck-acelerating.mp3-d5f46d6ad2e5b2b9f653b4689e980729.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ReloadGun.mp3-be7330953f31decbbeae2601ebe112d9.mp3str"
+
+[deps]
+
+source_file="res://Sounds/ReloadGun.mp3"
+dest_files=[ "res://.import/ReloadGun.mp3-be7330953f31decbbeae2601ebe112d9.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

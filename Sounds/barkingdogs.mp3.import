@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/barkingdogs.mp3-6ce05bf4c91538c1ae04fd2b5d562ec2.mp3str"
+
+[deps]
+
+source_file="res://Sounds/barkingdogs.mp3"
+dest_files=[ "res://.import/barkingdogs.mp3-6ce05bf4c91538c1ae04fd2b5d562ec2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

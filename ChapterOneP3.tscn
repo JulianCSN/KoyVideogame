@@ -1,0 +1,667 @@
+[gd_scene load_steps=58 format=2]
+
+[ext_resource path="res://Scripts/ChapterOneP3.gd" type="Script" id=1]
+[ext_resource path="res://Koy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://BG/PixelFantasy_Caves_1.0/rock4.png" type="Texture" id=3]
+[ext_resource path="res://BG/Free Pixel Art Hill/PNG/Hills Layer 05.png" type="Texture" id=4]
+[ext_resource path="res://Sounds/dungeon-air-6983.mp3" type="AudioStream" id=5]
+[ext_resource path="res://BG/PixelFantasy_Caves_1.0/rock1.png" type="Texture" id=6]
+[ext_resource path="res://Images/light.png" type="Texture" id=7]
+[ext_resource path="res://Sounds/droplets-in-a-cave-6785.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Sounds/light-rain-ambient-114354.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Sounds/crickets-and-frogs-continuous-loop-13163.mp3" type="AudioStream" id=10]
+[ext_resource path="res://Images/3c5600cfb817d38.png" type="Texture" id=11]
+[ext_resource path="res://Images/c4412e61f0af0f0.png" type="Texture" id=12]
+[ext_resource path="res://Sprites/trash assets/water bottle crumpled & small.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/trash assets/alcohol 4.png" type="Texture" id=14]
+[ext_resource path="res://Sprites/trash assets/alcohol 3.png" type="Texture" id=15]
+[ext_resource path="res://Sprites/trash assets/crumpled paper 2.png" type="Texture" id=16]
+[ext_resource path="res://Sprites/trash assets/garbage bag small 1.png" type="Texture" id=17]
+[ext_resource path="res://Sprites/trash assets/rotting food 2.png" type="Texture" id=18]
+[ext_resource path="res://Images/ca275debfce9b8f.png" type="Texture" id=19]
+[ext_resource path="res://Images/TX Village Props(1).png" type="Texture" id=20]
+[ext_resource path="res://Images/TX Village Props.png" type="Texture" id=21]
+[ext_resource path="res://Characters/Spider Sprite Sheet.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Emogis/Emojis116.webp" type="Texture" id=23]
+[ext_resource path="res://Sprites/Emogis/Emojis013.webp" type="Texture" id=24]
+[ext_resource path="res://Sounds/pop1.mp3" type="AudioStream" id=25]
+[ext_resource path="res://FontText/upheavtt.ttf" type="DynamicFontData" id=26]
+[ext_resource path="res://GUI/Keyboard & Controller Keys/Keyboard Black.png" type="Texture" id=27]
+[ext_resource path="res://Sounds/stomach.mp3" type="AudioStream" id=28]
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( -325, 143, 1351, 1167, -1424, 1191, -1767, -770 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 27 )
+region = Rect2( 80, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 27 )
+region = Rect2( 80, 128, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=21]
+animations = [ {
+"frames": [ SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="Animation" id=22]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("EmojiHambre2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "anim"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("EmojiHambre2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 22 )
+region = Rect2( 0, 288, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 22 )
+region = Rect2( 32, 288, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 22 )
+region = Rect2( 64, 288, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 22 )
+region = Rect2( 96, 288, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 22 )
+region = Rect2( 128, 288, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 22 )
+region = Rect2( 160, 288, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "idle",
+"speed": 10.0
+} ]
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -60, 687 ) ]
+}
+
+[sub_resource type="Animation" id=23]
+length = 31.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 8, 24.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -60, 680 ), Vector2( -60, 680 ), Vector2( 2100, 680 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 14, 177.5 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 14, 210.5 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 40
+font_data = ExtResource( 26 )
+
+[sub_resource type="Animation" id=19]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.862745, 0.862745, 0.862745, 0 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "appear"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Label2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.862745, 0.862745, 0.862745, 0 ), Color( 0.317647, 0.317647, 0.317647, 1 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 186.5, 104 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 20
+font_data = ExtResource( 26 )
+
+[sub_resource type="RectangleShape2D" id=27]
+extents = Vector2( 50.5, 186 )
+
+[sub_resource type="Animation" id=28]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 65, 270 ) ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "bajarpuerta"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Vector2( 65, 270 ), Vector2( 64, 621 ) ]
+}
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "disappear"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=25]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=26]
+resource_name = "appear"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="ChapterOneP3" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AudioLluviaFuera" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -23.596
+pitch_scale = 0.6
+autoplay = true
+
+[node name="AudioWindCavern" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -6.118
+autoplay = true
+
+[node name="AudioCavern" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -18.353
+autoplay = true
+
+[node name="AudioRanas" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -52.437
+pitch_scale = 0.83
+autoplay = true
+
+[node name="AudioPop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 25 )
+volume_db = -6.118
+pitch_scale = 1.2
+
+[node name="AudioStomach" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 28 )
+volume_db = -8.739
+pitch_scale = 0.67
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( -512, 81 )
+texture = ExtResource( 7 )
+texture_scale = 11.64
+energy = 3.64
+shadow_enabled = true
+shadow_gradient_length = 20.0
+shadow_filter = 2
+shadow_filter_smooth = 20.0
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Light2D"]
+position = Vector2( 497, -409 )
+occluder = SubResource( 3 )
+
+[node name="Fondo1" type="Sprite" parent="."]
+modulate = Color( 0.168627, 0.168627, 0.168627, 1 )
+position = Vector2( 705, 76 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Fondo5" type="Sprite" parent="."]
+modulate = Color( 0.0980392, 0.0980392, 0.0980392, 1 )
+position = Vector2( 2701, 32 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 6 )
+flip_h = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Tronco" type="Sprite" parent="."]
+modulate = Color( 0.12549, 0.12549, 0.12549, 1 )
+position = Vector2( 489, 639 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Axe" type="Sprite" parent="Tronco"]
+modulate = Color( 1, 0.996078, 0.996078, 1 )
+self_modulate = Color( 1, 0.956863, 0.956863, 1 )
+position = Vector2( 86, -36 )
+rotation = -0.289725
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 12 )
+
+[node name="Tronco2" type="Sprite" parent="Tronco"]
+position = Vector2( 148, 30 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 11 )
+
+[node name="Basura" type="Sprite" parent="."]
+modulate = Color( 0.172549, 0.172549, 0.172549, 1 )
+position = Vector2( 767, 657 )
+rotation = 0.34383
+scale = Vector2( 4, 4 )
+texture = ExtResource( 17 )
+
+[node name="Sprite5" type="Sprite" parent="Basura"]
+modulate = Color( 0.380392, 0.380392, 0.380392, 1 )
+position = Vector2( 0.57843, 8.29023 )
+rotation = -1.72962
+scale = Vector2( 2, 2 )
+texture = ExtResource( 18 )
+
+[node name="Sprite4" type="Sprite" parent="Basura"]
+modulate = Color( 0.380392, 0.380392, 0.380392, 1 )
+show_behind_parent = true
+position = Vector2( 9.66753, -2.66486 )
+rotation = 1.15017
+texture = ExtResource( 14 )
+
+[node name="Sprite2" type="Sprite" parent="Basura"]
+modulate = Color( 0.47451, 0.47451, 0.47451, 1 )
+position = Vector2( -6.94482, 0.627831 )
+rotation = -2.15897
+texture = ExtResource( 13 )
+
+[node name="Sprite3" type="Sprite" parent="Basura"]
+modulate = Color( 0.47451, 0.47451, 0.47451, 1 )
+position = Vector2( -14.709, 7.12537 )
+rotation = -1.72089
+texture = ExtResource( 15 )
+
+[node name="Sprite" type="Sprite" parent="Basura"]
+modulate = Color( 0.47451, 0.47451, 0.47451, 1 )
+position = Vector2( -8.37152, 4.05962 )
+rotation = -0.460767
+texture = ExtResource( 16 )
+
+[node name="Fogata" type="Sprite" parent="."]
+modulate = Color( 0.12549, 0.12549, 0.12549, 1 )
+position = Vector2( 1419, 651 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 21 )
+
+[node name="Cubeta" type="Sprite" parent="."]
+modulate = Color( 0.145098, 0.145098, 0.145098, 1 )
+position = Vector2( 1595, 661 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 20 )
+
+[node name="Linterna" type="Sprite" parent="."]
+modulate = Color( 0.0470588, 0.0470588, 0.0470588, 1 )
+position = Vector2( 850, 662 )
+rotation = 0.654498
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 19 )
+
+[node name="Pasto1" type="Sprite" parent="."]
+modulate = Color( 0.101961, 0.101961, 0.101961, 1 )
+position = Vector2( 1022, 221 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Koy" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.172549, 0.172549, 0.172549, 1 )
+position = Vector2( 108, 608 )
+
+[node name="Camera2D" type="Camera2D" parent="Koy"]
+position = Vector2( 5, -247 )
+current = true
+limit_left = 1
+limit_right = 2000
+
+[node name="InteractButton" type="Panel" parent="Koy"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -107.0
+margin_top = -49.0
+margin_right = -67.0
+margin_bottom = -9.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Koy/InteractButton"]
+modulate = Color( 0.592157, 1, 0.427451, 1 )
+position = Vector2( 20, 11 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 21 )
+playing = true
+
+[node name="EmojiHambre2" type="Sprite" parent="Koy"]
+visible = false
+position = Vector2( 28, -44 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 23 )
+
+[node name="Sprite" type="Sprite" parent="Koy/EmojiHambre2"]
+position = Vector2( -62.5, -1.25 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 24 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Koy/EmojiHambre2"]
+root_node = NodePath("../..")
+anims/RESET = SubResource( 22 )
+anims/anim = SubResource( 15 )
+
+[node name="Araña" type="Area2D" parent="."]
+position = Vector2( -60, 687 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Araña"]
+modulate = Color( 0.0705882, 0.0705882, 0.0705882, 1 )
+position = Vector2( 0, 1 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 11 )
+animation = "idle"
+frame = 4
+playing = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Araña"]
+autoplay = "walk"
+anims/RESET = SubResource( 12 )
+anims/walk = SubResource( 23 )
+
+[node name="Pared1" type="StaticBody2D" parent="."]
+position = Vector2( -14, 559 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared1"]
+shape = SubResource( 4 )
+
+[node name="Pared2" type="StaticBody2D" parent="."]
+position = Vector2( 2020, 507 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pared2"]
+shape = SubResource( 4 )
+
+[node name="InfoCueva1" type="Area2D" parent="."]
+position = Vector2( 1616, 554 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InfoCueva1"]
+position = Vector2( 2, -27 )
+shape = SubResource( 16 )
+
+[node name="Label2" type="Label" parent="InfoCueva1"]
+modulate = Color( 0.862745, 0.862745, 0.862745, 0 )
+margin_left = -1358.0
+margin_top = -171.0
+margin_right = -498.0
+margin_bottom = -135.0
+custom_fonts/font = SubResource( 17 )
+text = "será mejor regresar. . . aquí no hay nada"
+align = 1
+valign = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="InfoCueva1"]
+anims/RESET = SubResource( 19 )
+anims/appear = SubResource( 18 )
+
+[node name="Interact1" type="Area2D" parent="."]
+position = Vector2( 654, 608 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interact1"]
+position = Vector2( 10.5, -19 )
+shape = SubResource( 20 )
+
+[node name="Label" type="Label" parent="Interact1"]
+visible = false
+modulate = Color( 0.862745, 0.862745, 0.862745, 1 )
+margin_left = -157.0
+margin_top = -88.0
+margin_right = 42.0
+margin_bottom = -70.0
+custom_fonts/font = SubResource( 24 )
+text = "¿Qué es todo esto?"
+
+[node name="PuertaAfuera" type="Area2D" parent="."]
+position = Vector2( 65, 270 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PuertaAfuera"]
+position = Vector2( -12.5, -64 )
+shape = SubResource( 27 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PuertaAfuera"]
+anims/RESET = SubResource( 28 )
+anims/bajarpuerta = SubResource( 29 )
+
+[node name="InteractButton" type="Panel" parent="PuertaAfuera"]
+visible = false
+modulate = Color( 0.266667, 0.266667, 0.266667, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = -51.0
+margin_top = -50.0
+margin_right = -11.0
+margin_bottom = -10.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="PuertaAfuera/InteractButton"]
+modulate = Color( 0.592157, 1, 0.427451, 1 )
+position = Vector2( 20, 11 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 21 )
+frame = 1
+playing = true
+
+[node name="PantallaInical" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PantallaInical"]
+autoplay = "disappear"
+anims/RESET = SubResource( 1 )
+anims/disappear = SubResource( 2 )
+
+[node name="PantallaFinal" type="ColorRect" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -1324.0
+margin_top = -872.0
+margin_right = 3314.0
+margin_bottom = 1226.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PantallaFinal"]
+anims/RESET = SubResource( 25 )
+anims/appear = SubResource( 26 )
+
+[connection signal="area_entered" from="InfoCueva1" to="." method="_on_InfoCueva1_area_entered"]
+[connection signal="area_entered" from="Interact1" to="." method="_on_Interact1_area_entered"]
+[connection signal="area_exited" from="Interact1" to="." method="_on_Interact1_area_exited"]
+[connection signal="area_entered" from="PuertaAfuera" to="." method="_on_PuertaAfuera_area_entered"]
+[connection signal="area_exited" from="PuertaAfuera" to="." method="_on_PuertaAfuera_area_exited"]

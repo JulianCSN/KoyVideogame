@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/truck-start-engine.mp3-8ce1978e5b5827896c15d382b324783b.mp3str"
+
+[deps]
+
+source_file="res://Sounds/truck-start-engine.mp3"
+dest_files=[ "res://.import/truck-start-engine.mp3-8ce1978e5b5827896c15d382b324783b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

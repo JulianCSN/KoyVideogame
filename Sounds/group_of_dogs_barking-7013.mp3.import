@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/group_of_dogs_barking-7013.mp3-e7fa9beabc426036c357ec53cd1e7370.mp3str"
+
+[deps]
+
+source_file="res://Sounds/group_of_dogs_barking-7013.mp3"
+dest_files=[ "res://.import/group_of_dogs_barking-7013.mp3-e7fa9beabc426036c357ec53cd1e7370.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

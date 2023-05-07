@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/stomach.mp3-4afdaa8b66f8e4c99431f528ecbd5e02.mp3str"
+
+[deps]
+
+source_file="res://Sounds/stomach.mp3"
+dest_files=[ "res://.import/stomach.mp3-4afdaa8b66f8e4c99431f528ecbd5e02.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

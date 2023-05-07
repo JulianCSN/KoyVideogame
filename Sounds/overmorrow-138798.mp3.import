@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/overmorrow-138798.mp3-5e86af18a6cb251a00338a5f05fd22bb.mp3str"
+
+[deps]
+
+source_file="res://Sounds/overmorrow-138798.mp3"
+dest_files=[ "res://.import/overmorrow-138798.mp3-5e86af18a6cb251a00338a5f05fd22bb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

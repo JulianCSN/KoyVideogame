@@ -1,0 +1,745 @@
+[gd_scene load_steps=56 format=2]
+
+[ext_resource path="res://FontText/upheavtt.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://KoyNoCode.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/ChapterOneP5.gd" type="Script" id=3]
+[ext_resource path="res://BG/country-platform-files/02/parallax_mountain_pack/parallax_mountain_pack/layers/parallax-mountain-bg.png" type="Texture" id=4]
+[ext_resource path="res://BG/country-platform-files/01/country-platform-files/layers/country-platform-tiles-example-noTree.png" type="Texture" id=5]
+[ext_resource path="res://BG/Free Pixel Art Hill/PNG/Hills Layer 04.png" type="Texture" id=6]
+[ext_resource path="res://BG/Free Pixel Art Hill/PNG/Hills Layer 03.png" type="Texture" id=7]
+[ext_resource path="res://BG/Free Pixel Art Hill/PNG/Hills Layer 02.png" type="Texture" id=8]
+[ext_resource path="res://BG/country-platform-files/02/parallax_mountain_pack/parallax_mountain_pack/layers/parallax-mountain-montain-far.png" type="Texture" id=9]
+[ext_resource path="res://BG/country-platform-files/02/parallax_mountain_pack/parallax_mountain_pack/layers/parallax-mountain-trees.png" type="Texture" id=10]
+[ext_resource path="res://BG/country-platform-files/02/parallax_mountain_pack/parallax_mountain_pack/layers/parallax-mountain-mountains.png" type="Texture" id=11]
+[ext_resource path="res://Demi.tscn" type="PackedScene" id=12]
+[ext_resource path="res://BG/country-platform-files/02/parallax_mountain_pack/parallax_mountain_pack/layers/parallax-mountain-foreground-trees.png" type="Texture" id=13]
+[ext_resource path="res://Sounds/night-time-crickets-in-new-jersey-suburbs-19598.mp3" type="AudioStream" id=14]
+[ext_resource path="res://Sounds/birds-19624.mp3" type="AudioStream" id=15]
+[ext_resource path="res://Characters/Garden Birds/Crow/16x16/Flying.png" type="Texture" id=16]
+[ext_resource path="res://Sounds/tension-and-fear-108408.mp3" type="AudioStream" id=17]
+[ext_resource path="res://Images/light.png" type="Texture" id=18]
+[ext_resource path="res://Sounds/TruckArrival.mp3" type="AudioStream" id=19]
+[ext_resource path="res://Sounds/car-door-close-6929.mp3" type="AudioStream" id=20]
+[ext_resource path="res://Sounds/HunterWalks.mp3" type="AudioStream" id=21]
+[ext_resource path="res://Sprites/Emogis/ef680c30a573972.png" type="Texture" id=22]
+[ext_resource path="res://Sprites/Emogis/signo-de-exlamacion2-14698569.png" type="Texture" id=23]
+[ext_resource path="res://Sounds/pop1.mp3" type="AudioStream" id=24]
+[ext_resource path="res://Sounds/TruckLeaveDoor.mp3" type="AudioStream" id=25]
+[ext_resource path="res://Sounds/ReloadGun.mp3" type="AudioStream" id=26]
+[ext_resource path="res://Sounds/9mm-pistol-shot-6349.mp3" type="AudioStream" id=27]
+[ext_resource path="res://Sounds/cryfox.mp3" type="AudioStream" id=28]
+[ext_resource path="res://Sounds/truck-start-engine.mp3" type="AudioStream" id=29]
+[ext_resource path="res://Sounds/truck-acelerating.mp3" type="AudioStream" id=30]
+[ext_resource path="res://Sprites/Emogis/Emojis017.webp" type="Texture" id=31]
+[ext_resource path="res://Sounds/srs_foley_horse_galloping-89478.mp3" type="AudioStream" id=32]
+
+[sub_resource type="Animation" id=21]
+resource_name = "All"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2, 17 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.9, 0.9 ), Vector2( 0.9, 0.9 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2DCar:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 12, 22, 46, 48 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 2670, 608 ), Vector2( 1818, 595 ), Vector2( 1818, 595 ), Vector2( 2318, 595 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Demi:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 35, 37 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 724, 573 ), Vector2( 724, 573 ), Vector2( 1424, 573 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KoyNoCode:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 43, 44, 46.5, 47.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 554, 573 ), Vector2( 554, 573 ), Vector2( 954, 573 ), Vector2( 954, 573 ), Vector2( 1454, 573 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Light2DShot:enabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 41, 41.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ false, true, false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Light2DCar/LightOccluder2D:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 40.7, 40.9, 41.2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+
+[sub_resource type="Animation" id=22]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:zoom")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0.9, 0.9 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2DCar:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 2670, 608 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Demi:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 724, 573 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("KoyNoCode:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 554, 573 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Light2DShot:enabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Light2DCar/LightOccluder2D:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="OccluderPolygon2D" id=23]
+polygon = PoolVector2Array( -627, 351, 321, -10, -619, -263, -622, 127 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 16 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 16 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 16 )
+region = Rect2( 0, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 16 )
+region = Rect2( 16, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 16 )
+region = Rect2( 32, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 16 )
+region = Rect2( 16, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 16 )
+region = Rect2( 0, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 16 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 16 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 40.0
+} ]
+
+[sub_resource type="Animation" id=19]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -50, 339 ) ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "volar"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 22, 26 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -50, 339 ), Vector2( 1450, 300 ) ]
+}
+
+[sub_resource type="Animation" id=18]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -61, 155 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "volar"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 5, 7.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -61, 155 ), Vector2( 1439, 155 ) ]
+}
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "disappear"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.5, 4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Label2:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "appear"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="ChapterOneP5" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="AnimationAllSence" type="AnimationPlayer" parent="."]
+autoplay = "All"
+anims/All = SubResource( 21 )
+anims/RESET = SubResource( 22 )
+
+[node name="AudioGrillos" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+volume_db = -3.826
+autoplay = true
+
+[node name="AudioBirds" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -18.174
+autoplay = true
+
+[node name="AudioTension" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+volume_db = -1.748
+
+[node name="AudioPop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
+volume_db = -6.118
+pitch_scale = 1.2
+
+[node name="AudioFoxRun" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 32 )
+volume_db = -3.36
+pitch_scale = 1.39
+
+[node name="AudioCar" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1354, 579 )
+stream = ExtResource( 19 )
+volume_db = 5.049
+autoplay = true
+attenuation = 2.21914
+
+[node name="AudioCarDoor" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1354, 579 )
+stream = ExtResource( 20 )
+volume_db = 0.679
+pitch_scale = 1.2
+attenuation = 2.21914
+
+[node name="AudioHunterWlaks" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1354, 579 )
+stream = ExtResource( 21 )
+volume_db = 5.397
+attenuation = 2.21914
+
+[node name="AudioTruckLeaveDoor" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1354, 579 )
+stream = ExtResource( 25 )
+volume_db = 2.775
+attenuation = 2.21914
+
+[node name="AudioReloadGun" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1354, 579 )
+stream = ExtResource( 26 )
+volume_db = -19.074
+attenuation = 2.21914
+
+[node name="AudioShot" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1354, 579 )
+stream = ExtResource( 27 )
+volume_db = 3.65
+pitch_scale = 1.2
+attenuation = 3.73213
+
+[node name="AudioFoxCrying" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1354, 579 )
+stream = ExtResource( 28 )
+volume_db = -5.573
+pitch_scale = 1.36
+attenuation = 3.36359
+
+[node name="AudioTruckStart" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1354, 579 )
+stream = ExtResource( 29 )
+volume_db = 2.641
+attenuation = 3.03143
+
+[node name="AudioTruckAceleration" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 1354, 579 )
+stream = ExtResource( 30 )
+volume_db = 1.767
+attenuation = 3.03143
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 644, 170 )
+texture = ExtResource( 18 )
+texture_scale = 3.06
+color = Color( 20.23, 0, 5.2, 0.16 )
+energy = 0.64
+
+[node name="Light2DCar" type="Light2D" parent="."]
+position = Vector2( 2670, 608 )
+texture = ExtResource( 18 )
+texture_scale = 5.16
+energy = 1.56
+shadow_enabled = true
+shadow_gradient_length = 10.0
+shadow_filter = 5
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Light2DCar"]
+position = Vector2( 3, 0 )
+occluder = SubResource( 23 )
+
+[node name="Light2DShot" type="Light2D" parent="."]
+light_mask = 0
+position = Vector2( 1678, 617 )
+enabled = false
+texture = ExtResource( 18 )
+texture_scale = 4.32
+color = Color( 0.741176, 0.513726, 0.0352941, 1 )
+energy = 1.29
+shadow_enabled = true
+shadow_gradient_length = 10.0
+shadow_filter = 5
+
+[node name="Fondo" type="TextureRect" parent="."]
+self_modulate = Color( 0.839216, 0.839216, 0.839216, 1 )
+margin_right = 1280.0
+margin_bottom = 720.0
+texture = ExtResource( 4 )
+stretch_mode = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Montaña" type="Sprite" parent="Fondo"]
+modulate = Color( 0.819608, 0.819608, 0.819608, 1 )
+position = Vector2( 724, 236 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 9 )
+
+[node name="Montaña2" type="Sprite" parent="Fondo"]
+position = Vector2( 699, 344 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 11 )
+
+[node name="Montaña3" type="Sprite" parent="Fondo"]
+position = Vector2( 428, 249 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 10 )
+
+[node name="Montaña4" type="Sprite" parent="Fondo"]
+modulate = Color( 0.27451, 0.27451, 0.27451, 1 )
+position = Vector2( 473, 225 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 13 )
+
+[node name="Pajaro2" type="Area2D" parent="Fondo"]
+light_mask = 4
+position = Vector2( -50, 339 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Pajaro" type="AnimatedSprite" parent="Fondo/Pajaro2"]
+modulate = Color( 0.376471, 0.376471, 0.376471, 1 )
+position = Vector2( 0, -1 )
+rotation = 0.575959
+frames = SubResource( 6 )
+playing = true
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Fondo/Pajaro2"]
+autoplay = "volar"
+anims/RESET = SubResource( 19 )
+anims/volar = SubResource( 20 )
+
+[node name="hojas3" type="Sprite" parent="Fondo"]
+modulate = Color( 0.290196, 0.231373, 0.352941, 1 )
+position = Vector2( 639, 312 )
+scale = Vector2( 3.5, 3.5 )
+texture = ExtResource( 8 )
+
+[node name="hojas4" type="Sprite" parent="Fondo"]
+modulate = Color( 0.435294, 0.278431, 0.352941, 1 )
+position = Vector2( 1046, 291 )
+scale = Vector2( 3.5, 3.5 )
+texture = ExtResource( 7 )
+
+[node name="hojas2" type="Sprite" parent="Fondo"]
+modulate = Color( 0.466667, 0.337255, 0.352941, 1 )
+position = Vector2( 649, 306 )
+scale = Vector2( 3.5, 3.5 )
+texture = ExtResource( 7 )
+
+[node name="Piso" type="Sprite" parent="Fondo"]
+modulate = Color( 0.2, 0.2, 0.2, 1 )
+position = Vector2( 634, 376 )
+scale = Vector2( 3.5, 3.5 )
+texture = ExtResource( 5 )
+
+[node name="Pajaro1" type="Area2D" parent="."]
+position = Vector2( -61, 155 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Pajaro" type="AnimatedSprite" parent="Pajaro1"]
+modulate = Color( 0.376471, 0.376471, 0.376471, 1 )
+position = Vector2( 0, -1 )
+rotation = 0.575959
+frames = SubResource( 6 )
+playing = true
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pajaro1"]
+root_node = NodePath("../Pajaro")
+autoplay = "volar"
+anims/RESET = SubResource( 18 )
+anims/volar = SubResource( 17 )
+
+[node name="KoyNoCode" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
+position = Vector2( 554, 573 )
+
+[node name="EmojiWhats" type="Sprite" parent="KoyNoCode"]
+visible = false
+position = Vector2( 30, -35 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 22 )
+
+[node name="EmojiNojao" type="Sprite" parent="KoyNoCode"]
+visible = false
+position = Vector2( 27, -36 )
+scale = Vector2( 0.64, 0.64 )
+texture = ExtResource( 31 )
+
+[node name="Demi" parent="." instance=ExtResource( 12 )]
+modulate = Color( 0.705882, 0.705882, 0.705882, 1 )
+position = Vector2( 724, 573 )
+
+[node name="EmojiWhats" type="Sprite" parent="Demi"]
+visible = false
+position = Vector2( 30, -35 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 22 )
+
+[node name="EmojiAdmiracion" type="Sprite" parent="Demi"]
+visible = false
+modulate = Color( 0.878431, 0.878431, 0.878431, 1 )
+position = Vector2( -35, -15 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 23 )
+
+[node name="EmojiAdmiracion2" type="Sprite" parent="Demi"]
+visible = false
+modulate = Color( 0.878431, 0.878431, 0.878431, 1 )
+position = Vector2( -28, -23 )
+rotation = 0.328122
+scale = Vector2( 0.298019, 0.307031 )
+texture = ExtResource( 23 )
+
+[node name="hojas" type="Sprite" parent="."]
+modulate = Color( 0.215686, 0.215686, 0.215686, 1 )
+position = Vector2( 634, 374 )
+scale = Vector2( 3.5, 3.5 )
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 640, 360 )
+current = true
+zoom = Vector2( 0.9, 0.9 )
+limit_left = 1
+limit_right = 1280
+
+[node name="PantallaInical" type="ColorRect" parent="."]
+margin_left = -2976.0
+margin_top = -1652.0
+margin_right = 5093.0
+margin_bottom = 2285.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label2" type="Label" parent="PantallaInical"]
+modulate = Color( 1, 1, 1, 0 )
+margin_left = 3069.0
+margin_top = 2244.0
+margin_right = 3655.0
+margin_bottom = 2280.0
+custom_fonts/font = SubResource( 5 )
+text = "5 meses después . . ."
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PantallaInical"]
+autoplay = "disappear"
+anims/RESET = SubResource( 1 )
+anims/disappear = SubResource( 2 )
+
+[node name="PantallaFinal" type="ColorRect" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_left = -2919.0
+margin_top = -2119.0
+margin_right = 4871.0
+margin_bottom = 2754.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PantallaFinal"]
+anims/RESET = SubResource( 3 )
+anims/appear = SubResource( 4 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/srs_foley_horse_galloping-89478.mp3-d8cf9f8cca5a91d231f5b47c43b801fd.mp3str"
+
+[deps]
+
+source_file="res://Sounds/srs_foley_horse_galloping-89478.mp3"
+dest_files=[ "res://.import/srs_foley_horse_galloping-89478.mp3-d8cf9f8cca5a91d231f5b47c43b801fd.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

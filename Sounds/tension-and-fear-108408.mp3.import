@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tension-and-fear-108408.mp3-3a7b9cb3a4733e0bdc893ed37445e33c.mp3str"
+
+[deps]
+
+source_file="res://Sounds/tension-and-fear-108408.mp3"
+dest_files=[ "res://.import/tension-and-fear-108408.mp3-3a7b9cb3a4733e0bdc893ed37445e33c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

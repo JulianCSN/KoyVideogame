@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/forest-swamp-6751.mp3-c285ab7939fe4458a4086f1f6fa3a317.mp3str"
+
+[deps]
+
+source_file="res://Sounds/forest-swamp-6751.mp3"
+dest_files=[ "res://.import/forest-swamp-6751.mp3-c285ab7939fe4458a4086f1f6fa3a317.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

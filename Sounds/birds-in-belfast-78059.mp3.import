@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/birds-in-belfast-78059.mp3-3179c42f27556fdcc20c09f0c331a74a.mp3str"
+
+[deps]
+
+source_file="res://Sounds/birds-in-belfast-78059.mp3"
+dest_files=[ "res://.import/birds-in-belfast-78059.mp3-3179c42f27556fdcc20c09f0c331a74a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,1074 @@
+[gd_scene load_steps=80 format=2]
+
+[ext_resource path="res://Images/Forest Landscape.jpg" type="Texture" id=1]
+[ext_resource path="res://Images/pixil-frame-0.png" type="Texture" id=2]
+[ext_resource path="res://Sounds/ForestAndWindArreglado.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/MainTeme01.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Images/Cloud01.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=6]
+[ext_resource path="res://Images/Cloud02.png" type="Texture" id=7]
+[ext_resource path="res://Images/SkitGames01.png" type="Texture" id=8]
+[ext_resource path="res://Player4MainMenu.tscn" type="PackedScene" id=9]
+[ext_resource path="res://ExtraPlayer4MainMenu.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Ardilla4MainMenu.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Images/SimpleLineForLogo.png" type="Texture" id=12]
+[ext_resource path="res://Images/LogoKoyV2.png" type="Texture" id=13]
+[ext_resource path="res://FontText/pixelart.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://FontText/PixelFJVerdana12pt.ttf" type="DynamicFontData" id=15]
+[ext_resource path="res://SettingsMainMenu.tscn" type="PackedScene" id=16]
+[ext_resource path="res://CreditosPage.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Sounds/click-21156.mp3" type="AudioStream" id=18]
+[ext_resource path="res://Sounds/SoundPlay.mp3" type="AudioStream" id=19]
+[ext_resource path="res://GUI/Keyboard & Controller Keys/Keyboard Black.png" type="Texture" id=20]
+
+[sub_resource type="Animation" id=3]
+resource_name = "MoveToRight"
+length = 95.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 95 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -250, 100 ), Vector2( 1200, 100 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -585, -73 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "MoveToRight"
+length = 200.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 198.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -360, -67 ), Vector2( 1200, -73 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "MoveToRight02"
+length = 200.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 200 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -400, -50 ), Vector2( 1259, -50 ) ]
+}
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -585, -73 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rect_rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=12]
+resource_name = "BirdMove"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( -31, 330 ), Vector2( 1314, 227 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -31, 267 ) ]
+}
+
+[sub_resource type="Animation" id=14]
+resource_name = "BirdMove"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1333, 500 ), Vector2( -30, 370 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -31, 267 ) ]
+}
+
+[sub_resource type="Animation" id=17]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -3000, 610 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "runAnim"
+length = 60.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 16.4, 31, 45, 60 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -3000, 610 ), Vector2( -3000, 610 ), Vector2( 517, 611 ), Vector2( 517, 611 ), Vector2( -3000, 611 ) ]
+}
+
+[sub_resource type="Curve" id=1]
+min_value = -360.0
+max_value = 360.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 91.6364 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.430168 )
+colors = PoolColorArray( 0.378906, 0.378906, 0.378906, 1, 1, 1, 1, 1 )
+
+[sub_resource type="Animation" id=18]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 440, 0 ) ]
+}
+
+[sub_resource type="Animation" id=19]
+resource_name = "moveLetters"
+length = 12.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 5, 9 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 440, -500 ), Vector2( 440, -500 ), Vector2( 440, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=69]
+size = 8
+extra_spacing_char = 3
+font_data = ExtResource( 15 )
+
+[sub_resource type="StyleBoxFlat" id=29]
+bg_color = Color( 0, 0.384314, 0.0823529, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="Theme" id=30]
+Panel/styles/panel = SubResource( 29 )
+
+[sub_resource type="DynamicFont" id=20]
+extra_spacing_top = 5
+extra_spacing_bottom = 5
+font_data = ExtResource( 14 )
+
+[sub_resource type="StyleBoxFlat" id=31]
+bg_color = Color( 0, 0.52549, 0, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id=32]
+bg_color = Color( 0, 0.447059, 0, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id=33]
+bg_color = Color( 0, 0.52549, 0, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id=34]
+bg_color = Color( 0, 0.290196, 0, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="Theme" id=22]
+Button/fonts/font = SubResource( 20 )
+Button/styles/disabled = SubResource( 31 )
+Button/styles/hover = SubResource( 32 )
+Button/styles/normal = SubResource( 33 )
+Button/styles/pressed = SubResource( 34 )
+
+[sub_resource type="StyleBoxFlat" id=35]
+bg_color = Color( 0, 0.345098, 0.65098, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="Theme" id=36]
+Panel/styles/panel = SubResource( 35 )
+
+[sub_resource type="StyleBoxFlat" id=37]
+bg_color = Color( 0, 0.466667, 0.721569, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id=38]
+bg_color = Color( 0, 0.396078, 0.607843, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id=39]
+bg_color = Color( 0, 0.278431, 0.431373, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="Theme" id=40]
+Button/fonts/font = SubResource( 20 )
+Button/styles/disabled = SubResource( 37 )
+Button/styles/hover = SubResource( 38 )
+Button/styles/normal = SubResource( 37 )
+Button/styles/pressed = SubResource( 39 )
+
+[sub_resource type="StyleBoxFlat" id=41]
+bg_color = Color( 0.490196, 0, 0, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="Theme" id=42]
+Panel/styles/panel = SubResource( 41 )
+
+[sub_resource type="StyleBoxFlat" id=43]
+bg_color = Color( 1, 0.203922, 0.203922, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id=46]
+bg_color = Color( 0.823529, 0, 0, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id=47]
+bg_color = Color( 0.356863, 0, 0, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="Theme" id=44]
+Button/fonts/font = SubResource( 20 )
+Button/styles/disabled = SubResource( 43 )
+Button/styles/hover = SubResource( 46 )
+Button/styles/normal = SubResource( 43 )
+Button/styles/pressed = SubResource( 47 )
+
+[sub_resource type="Animation" id=8]
+resource_name = "FadeOutBlackBG"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3.6, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 6 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=9]
+length = 0.001
+
+[sub_resource type="Animation" id=10]
+resource_name = "FadeOutLogo"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.6, 1.5, 2.6, 3.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=11]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="StyleBoxFlat" id=49]
+bg_color = Color( 0.00392157, 0.184314, 0.305882, 1 )
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="Theme" id=50]
+Panel/styles/panel = SubResource( 49 )
+
+[sub_resource type="DynamicFont" id=51]
+size = 24
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=52]
+size = 8
+font_data = ExtResource( 15 )
+
+[sub_resource type="DynamicFont" id=55]
+size = 24
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=56]
+font_data = ExtResource( 14 )
+
+[sub_resource type="AtlasTexture" id=58]
+atlas = ExtResource( 20 )
+region = Rect2( 48, 144, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 20 )
+region = Rect2( 48, 48, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=60]
+animations = [ {
+"frames": [ SubResource( 58 ), SubResource( 59 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 20 )
+region = Rect2( 80, 48, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 20 )
+region = Rect2( 80, 144, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=63]
+animations = [ {
+"frames": [ SubResource( 61 ), SubResource( 62 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 20 )
+region = Rect2( 80, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 20 )
+region = Rect2( 80, 128, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=66]
+animations = [ {
+"frames": [ SubResource( 64 ), SubResource( 65 ) ],
+"loop": true,
+"name": "default",
+"speed": 1.0
+} ]
+
+[sub_resource type="Theme" id=67]
+
+[sub_resource type="DynamicFont" id=68]
+size = 8
+font_data = ExtResource( 15 )
+
+[sub_resource type="Animation" id=53]
+resource_name = "FadeIn"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=54]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+
+[node name="MainTemeAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -17.0
+
+[node name="WindAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 1.755
+
+[node name="Click01" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+volume_db = -4.0
+pitch_scale = 1.2
+
+[node name="SoundPlay" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+volume_db = -9.378
+pitch_scale = 1.94
+
+[node name="ForestBackground" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Cloud01" type="TextureRect" parent="."]
+margin_left = -585.0
+margin_top = -73.0
+margin_right = -243.999
+margin_bottom = 104.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer01" type="AnimationPlayer" parent="Cloud01"]
+anims/MoveToRight = SubResource( 3 )
+anims/RESET = SubResource( 4 )
+
+[node name="Cloud02" type="TextureRect" parent="."]
+margin_left = -585.0
+margin_top = -73.0
+margin_right = -320.0
+margin_bottom = 171.0
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer02" type="AnimationPlayer" parent="Cloud02"]
+anims/MoveToRight = SubResource( 5 )
+anims/MoveToRight02 = SubResource( 7 )
+anims/RESET = SubResource( 6 )
+
+[node name="ExtraPlayer4MainMenu" parent="." instance=ExtResource( 10 )]
+modulate = Color( 1, 1, 1, 0.717647 )
+position = Vector2( -31, 267 )
+
+[node name="AnimationPlayer05" type="AnimationPlayer" parent="ExtraPlayer4MainMenu"]
+anims/BirdMove = SubResource( 12 )
+anims/RESET = SubResource( 13 )
+
+[node name="ExtraPlayer4MainMenu2" parent="." instance=ExtResource( 10 )]
+position = Vector2( -31, 267 )
+
+[node name="AnimationPlayer06" type="AnimationPlayer" parent="ExtraPlayer4MainMenu2"]
+anims/BirdMove = SubResource( 14 )
+anims/RESET = SubResource( 15 )
+
+[node name="Ardilla4MainMenu" parent="." instance=ExtResource( 11 )]
+position = Vector2( -3000, 610 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Ardilla4MainMenu"]
+autoplay = "runAnim"
+anims/RESET = SubResource( 17 )
+anims/runAnim = SubResource( 16 )
+
+[node name="Player4MainMenu" parent="." instance=ExtResource( 9 )]
+position = Vector2( 907, 605 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2( -204, 300 )
+amount = 10
+lifetime = 4.0
+speed_scale = 0.7
+texture = ExtResource( 2 )
+emission_shape = 2
+emission_rect_extents = Vector2( 500, 100 )
+gravity = Vector2( 400, 98 )
+initial_velocity_random = 0.2
+angular_velocity = 30.0
+linear_accel = -57.07
+linear_accel_random = 0.35
+angle_random = 0.58
+angle_curve = SubResource( 1 )
+scale_amount = 0.05
+scale_amount_random = 0.15
+color_ramp = SubResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="KoyLetters" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -200.0
+margin_right = 200.0
+margin_bottom = 300.0
+texture = ExtResource( 13 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="KoyLetters"]
+autoplay = "moveLetters"
+anims/RESET = SubResource( 18 )
+anims/moveLetters = SubResource( 19 )
+
+[node name="Label" type="Label" parent="KoyLetters"]
+margin_left = 605.0
+margin_top = 145.0
+margin_right = 657.0
+margin_bottom = 163.0
+custom_fonts/font = SubResource( 69 )
+text = "V  1.2"
+
+[node name="Line1" type="TextureRect" parent="KoyLetters"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -38.0
+margin_top = -94.0
+margin_right = 262.0
+margin_bottom = 106.0
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Line2" type="TextureRect" parent="KoyLetters"]
+margin_left = -260.0
+margin_top = 56.0
+margin_right = 40.0
+margin_bottom = 256.0
+texture = ExtResource( 12 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel01" type="Panel" parent="KoyLetters"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = 155.0
+margin_right = 75.0
+margin_bottom = 195.0
+theme = SubResource( 30 )
+
+[node name="BtnJugar" type="Button" parent="KoyLetters/Panel01"]
+anchor_left = 0.5
+anchor_top = 0.415
+anchor_right = 0.5
+anchor_bottom = 0.415
+margin_left = -71.0
+margin_top = -13.6
+margin_right = 71.0
+margin_bottom = 20.4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 22 )
+enabled_focus_mode = 0
+text = "JUGAR"
+
+[node name="Panel02" type="Panel" parent="KoyLetters"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = 205.0
+margin_right = 75.0
+margin_bottom = 245.0
+theme = SubResource( 36 )
+
+[node name="BtnOpciones" type="Button" parent="KoyLetters/Panel02"]
+anchor_left = 0.5
+anchor_top = 0.415
+anchor_right = 0.5
+anchor_bottom = 0.415
+margin_left = -71.0
+margin_top = -13.6
+margin_right = 71.0
+margin_bottom = 20.4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 40 )
+enabled_focus_mode = 0
+text = "OPCIONES"
+
+[node name="Panel03" type="Panel" parent="KoyLetters"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -75.0
+margin_top = 255.0
+margin_right = 75.0
+margin_bottom = 295.0
+theme = SubResource( 42 )
+
+[node name="BtnCreditos" type="Button" parent="KoyLetters/Panel03"]
+anchor_left = 0.5
+anchor_top = 0.415
+anchor_right = 0.5
+anchor_bottom = 0.415
+margin_left = -71.0
+margin_top = -13.6
+margin_right = 71.0
+margin_bottom = 20.4
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 44 )
+enabled_focus_mode = 0
+text = "CREDITOS"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 50.0
+margin_bottom = 50.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer03" type="AnimationPlayer" parent="ColorRect"]
+autoplay = "FadeOutBlackBG"
+anims/FadeOutBlackBG = SubResource( 8 )
+anims/RESET = SubResource( 9 )
+
+[node name="Logo" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -175.0
+margin_top = -175.0
+margin_right = 175.0
+margin_bottom = 175.0
+texture = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer04" type="AnimationPlayer" parent="Logo"]
+autoplay = "FadeOutLogo"
+anims/FadeOutLogo = SubResource( 10 )
+anims/RESET = SubResource( 11 )
+
+[node name="SettingsMainMenu" parent="." instance=ExtResource( 16 )]
+visible = false
+
+[node name="Panel" type="Panel" parent="SettingsMainMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -173.0
+margin_top = -75.5
+margin_right = 173.0
+margin_bottom = -34.5
+theme = SubResource( 50 )
+
+[node name="Musica" type="Label" parent="SettingsMainMenu/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -132.0
+margin_top = -13.5
+margin_right = 132.0
+margin_bottom = 13.5
+custom_colors/font_color = Color( 0.156863, 0.760784, 0, 1 )
+custom_fonts/font = SubResource( 51 )
+text = "MUSICA DEL JUEGO"
+align = 1
+valign = 1
+
+[node name="BtnActivarDesMusica" type="Button" parent="SettingsMainMenu/Panel"]
+margin_top = 0.5
+margin_right = 347.0
+margin_bottom = 40.5
+focus_mode = 0
+mouse_default_cursor_shape = 2
+enabled_focus_mode = 0
+flat = true
+
+[node name="Advertencia01" type="Label" parent="SettingsMainMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -267.5
+margin_top = -145.5
+margin_right = 267.5
+margin_bottom = -114.5
+custom_fonts/font = SubResource( 52 )
+text = "El guardado de partida no se encuentra disponible en esta versión del juego"
+align = 1
+valign = 1
+
+[node name="Advertencia02" type="Label" parent="SettingsMainMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -267.5
+margin_top = -110.5
+margin_right = 267.5
+margin_bottom = -79.5
+custom_fonts/font = SubResource( 52 )
+text = "Se recomienda utilizar audífonos para una mejor experiencia"
+align = 1
+valign = 1
+
+[node name="Panel2" type="Panel" parent="SettingsMainMenu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -263.0
+margin_top = -20.5
+margin_right = 263.0
+margin_bottom = 156.5
+theme = SubResource( 50 )
+
+[node name="Controles" type="Label" parent="SettingsMainMenu/Panel2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -127.0
+margin_top = -80.5
+margin_right = 127.0
+margin_bottom = -53.5
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 55 )
+text = "CONTROLES"
+align = 1
+valign = 1
+
+[node name="Controles2" type="Label" parent="SettingsMainMenu/Panel2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -246.0
+margin_top = -32.0
+margin_right = -126.0
+margin_bottom = -5.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 56 )
+text = "MOVIMIENTO             y"
+align = 1
+valign = 1
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="SettingsMainMenu/Panel2/Controles2"]
+position = Vector2( 148, 12 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 60 )
+frame = 1
+playing = true
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="SettingsMainMenu/Panel2/Controles2"]
+position = Vector2( 206, 12 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 63 )
+frame = 1
+playing = true
+
+[node name="Controles3" type="Label" parent="SettingsMainMenu/Panel2"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -246.0
+margin_top = 12.0
+margin_right = -126.0
+margin_bottom = 39.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 56 )
+text = "INTERACCION"
+align = 1
+valign = 1
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="SettingsMainMenu/Panel2/Controles3"]
+modulate = Color( 0.286275, 0.988235, 0, 1 )
+position = Vector2( 160, 10 )
+scale = Vector2( 2, 2 )
+frames = SubResource( 66 )
+playing = true
+
+[node name="ButtonMasInfo" type="Button" parent="SettingsMainMenu/Panel2"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -268.5
+margin_top = 12.0
+margin_right = 268.5
+margin_bottom = 50.0
+focus_mode = 0
+mouse_default_cursor_shape = 2
+theme = SubResource( 67 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.427451, 1, 0.364706, 1 )
+custom_colors/font_color_pressed = Color( 0.0117647, 0.411765, 0, 1 )
+custom_fonts/font = SubResource( 68 )
+text = "Consulta más información acerca de el tráfico ilegal de especies en México"
+flat = true
+
+[node name="CreditosPage" parent="." instance=ExtResource( 17 )]
+visible = false
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 1308.0
+margin_bottom = 744.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ColorRect2"]
+anims/FadeIn = SubResource( 53 )
+anims/RESET = SubResource( 54 )
+
+[connection signal="pressed" from="KoyLetters/Panel01/BtnJugar" to="." method="_on_BtnJugar_pressed"]
+[connection signal="pressed" from="KoyLetters/Panel02/BtnOpciones" to="." method="_on_BtnOpciones_pressed"]
+[connection signal="pressed" from="KoyLetters/Panel03/BtnCreditos" to="." method="_on_BtnCreditos_pressed"]
+[connection signal="pressed" from="SettingsMainMenu/Panel/BtnActivarDesMusica" to="." method="_on_BtnActivarDesMusica_pressed"]
+[connection signal="pressed" from="SettingsMainMenu/Panel2/ButtonMasInfo" to="." method="_on_ButtonMasInfo_pressed"]

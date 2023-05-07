@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/heartbeat-89bpm-34936.mp3-23f482c8265d3ed77c77cc2d77667133.mp3str"
+
+[deps]
+
+source_file="res://Sounds/heartbeat-89bpm-34936.mp3"
+dest_files=[ "res://.import/heartbeat-89bpm-34936.mp3-23f482c8265d3ed77c77cc2d77667133.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

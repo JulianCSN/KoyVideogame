@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/dark-piano-tension-6057.mp3-97b48c4629ef25eadf8ce2e558f9cb1a.mp3str"
+
+[deps]
+
+source_file="res://Sounds/dark-piano-tension-6057.mp3"
+dest_files=[ "res://.import/dark-piano-tension-6057.mp3-97b48c4629ef25eadf8ce2e558f9cb1a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

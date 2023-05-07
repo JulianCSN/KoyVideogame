@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TruckLeaveDoor.mp3-6132978e2c66834d5ec18387d53e9f1f.mp3str"
+
+[deps]
+
+source_file="res://Sounds/TruckLeaveDoor.mp3"
+dest_files=[ "res://.import/TruckLeaveDoor.mp3-6132978e2c66834d5ec18387d53e9f1f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

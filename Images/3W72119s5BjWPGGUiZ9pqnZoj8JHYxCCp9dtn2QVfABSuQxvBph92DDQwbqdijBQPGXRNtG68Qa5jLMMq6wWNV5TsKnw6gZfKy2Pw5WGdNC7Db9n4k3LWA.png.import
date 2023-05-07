@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/3W72119s5BjWPGGUiZ9pqnZoj8JHYxCCp9dtn2QVfABSuQxvBph92DDQwbqdijBQPGXRNtG68Qa5jLMMq6wWNV5TsKnw6gZfKy2Pw5WGdNC7Db9n4k3LWA.png-ea9ef8de96360032c1c6bef82ba20142.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Images/3W72119s5BjWPGGUiZ9pqnZoj8JHYxCCp9dtn2QVfABSuQxvBph92DDQwbqdijBQPGXRNtG68Qa5jLMMq6wWNV5TsKnw6gZfKy2Pw5WGdNC7Db9n4k3LWA.png"
+dest_files=[ "res://.import/3W72119s5BjWPGGUiZ9pqnZoj8JHYxCCp9dtn2QVfABSuQxvBph92DDQwbqdijBQPGXRNtG68Qa5jLMMq6wWNV5TsKnw6gZfKy2Pw5WGdNC7Db9n4k3LWA.png-ea9ef8de96360032c1c6bef82ba20142.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/inspiring-landscape-121838.mp3-1a2036669208ad338495623815eccdd1.mp3str"
+
+[deps]
+
+source_file="res://Sounds/inspiring-landscape-121838.mp3"
+dest_files=[ "res://.import/inspiring-landscape-121838.mp3-1a2036669208ad338495623815eccdd1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

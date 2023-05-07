@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/LostLevel.mp3-de876fdcad0bd63480ed5d70bcc14943.mp3str"
+
+[deps]
+
+source_file="res://Sounds/LostLevel.mp3"
+dest_files=[ "res://.import/LostLevel.mp3-de876fdcad0bd63480ed5d70bcc14943.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

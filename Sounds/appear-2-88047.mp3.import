@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/appear-2-88047.mp3-c9aca1ebd018393bb9f9070bd81bb2e4.mp3str"
+
+[deps]
+
+source_file="res://Sounds/appear-2-88047.mp3"
+dest_files=[ "res://.import/appear-2-88047.mp3-c9aca1ebd018393bb9f9070bd81bb2e4.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

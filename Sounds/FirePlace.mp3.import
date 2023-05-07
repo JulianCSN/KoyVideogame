@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/FirePlace.mp3-c0d3b400a871ab0bf93bc17186f450f5.mp3str"
+
+[deps]
+
+source_file="res://Sounds/FirePlace.mp3"
+dest_files=[ "res://.import/FirePlace.mp3-c0d3b400a871ab0bf93bc17186f450f5.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

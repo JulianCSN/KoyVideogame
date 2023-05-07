@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cryfox.mp3-e60377088885f762ea95c47fcf893838.mp3str"
+
+[deps]
+
+source_file="res://Sounds/cryfox.mp3"
+dest_files=[ "res://.import/cryfox.mp3-e60377088885f762ea95c47fcf893838.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

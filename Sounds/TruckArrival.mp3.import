@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/TruckArrival.mp3-409c61ecb0519e4b6cd2104f1a5e7122.mp3str"
+
+[deps]
+
+source_file="res://Sounds/TruckArrival.mp3"
+dest_files=[ "res://.import/TruckArrival.mp3-409c61ecb0519e4b6cd2104f1a5e7122.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,355 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://KoyNoCode.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Images/Chimenea1.png" type="Texture" id=3]
+[ext_resource path="res://Images/Chimenea2.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/ChapterOneP7.gd" type="Script" id=5]
+[ext_resource path="res://Images/burning_loop_1.png" type="Texture" id=6]
+[ext_resource path="res://Sounds/dark-piano-tension-6057.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Images/light.png" type="Texture" id=8]
+[ext_resource path="res://Sounds/FirePlace.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Images/blood1.png" type="Texture" id=10]
+
+[sub_resource type="OccluderPolygon2D" id=14]
+polygon = PoolVector2Array( -76, 16, -69, 19, -61, 22, -53, 24, -47, 19, -35, 22, -22, 25, -11, 27, -3, 30, 10, 32, 14, 28, 31, 28, 41, 27, 49, 24, 59, 20, 75, 17, 82, 18, 80, -1, 72, -23, 53, -50, 28, -70, 4, -76, -13, -74, -42, -61, -59, -44, -71, -21, -79, -1 )
+
+[sub_resource type="OccluderPolygon2D" id=13]
+polygon = PoolVector2Array( 7, 38, 83, 25, 83, 143, -72, 143, -76, 26 )
+
+[sub_resource type="Animation" id=19]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.41 ]
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "movelight"
+length = 3.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:energy")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4, 0.8, 1.2, 1.6, 2, 2.4, 2.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 1.41, 1.2, 1.46, 1.41, 1.2, 1.46, 1.41, 1.2 ]
+}
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 6 )
+region = Rect2( 0, 0, 24, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 6 )
+region = Rect2( 24, 0, 24, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 6 )
+region = Rect2( 48, 0, 24, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 6 )
+region = Rect2( 72, 0, 24, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 6 )
+region = Rect2( 96, 0, 24, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 6 )
+region = Rect2( 120, 0, 24, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 6 )
+region = Rect2( 144, 0, 24, 32 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 6 )
+region = Rect2( 168, 0, 24, 32 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="Animation" id=18]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 604, 320 ) ]
+}
+
+[sub_resource type="Animation" id=15]
+resource_name = "move"
+length = 14.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 13 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 621, 336 ), Vector2( 621, 555 ) ]
+}
+
+[sub_resource type="Animation" id=16]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "appear"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+
+[sub_resource type="Animation" id=3]
+resource_name = "appear"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[node name="ChapterOneP7" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="AudioPianoTension" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -0.33
+autoplay = true
+
+[node name="AudioFireplace" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -10.487
+autoplay = true
+
+[node name="Light2D2" type="Light2D" parent="."]
+light_mask = 2
+position = Vector2( 587, 628 )
+texture = ExtResource( 8 )
+texture_scale = 0.55
+color = Color( 0.556863, 0.556863, 0.556863, 1 )
+energy = 3.58
+shadow_enabled = true
+shadow_gradient_length = 3.9
+shadow_filter = 2
+shadow_filter_smooth = 11.8
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Light2D2"]
+light_mask = 2
+position = Vector2( 1, 3 )
+occluder = SubResource( 14 )
+light_mask = 2
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 589, 614 )
+texture = ExtResource( 8 )
+texture_scale = 2.68
+energy = 1.41
+shadow_enabled = true
+shadow_gradient_length = 112.7
+shadow_filter = 3
+shadow_filter_smooth = 5.8
+shadow_item_cull_mask = 3
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Light2D"]
+position = Vector2( -3, 2 )
+occluder = SubResource( 13 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Light2D"]
+autoplay = "movelight"
+anims/RESET = SubResource( 19 )
+anims/movelight = SubResource( 20 )
+
+[node name="Pared" type="ColorRect" parent="."]
+margin_right = 1280.0
+margin_bottom = 671.0
+color = Color( 0.0745098, 0.0470588, 0, 1 )
+
+[node name="Piso" type="ColorRect" parent="."]
+margin_top = 660.0
+margin_right = 1279.0
+margin_bottom = 720.0
+color = Color( 0.235294, 0.14902, 0.0117647, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="Piso"]
+margin_right = 1279.0
+margin_bottom = 60.0
+color = Color( 0.121569, 0.0745098, 0.00784314, 1 )
+
+[node name="ColorRect4" type="ColorRect" parent="Piso"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -639.5
+margin_top = -30.0
+margin_right = 639.5
+margin_bottom = -24.0
+color = Color( 0.0980392, 0.0588235, 0, 1 )
+
+[node name="Chimenea2" type="TextureRect" parent="."]
+modulate = Color( 0.341176, 0.341176, 0.341176, 1 )
+margin_left = 195.0
+margin_top = 356.0
+margin_right = 515.0
+margin_bottom = 536.0
+rect_scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 4 )
+
+[node name="Fire" type="AnimatedSprite" parent="."]
+modulate = Color( 0.486275, 0.486275, 0.486275, 1 )
+position = Vector2( 590, 606 )
+scale = Vector2( 3, 3 )
+frames = SubResource( 12 )
+frame = 1
+playing = true
+
+[node name="Chimenea1" type="TextureRect" parent="."]
+modulate = Color( 0.341176, 0.341176, 0.341176, 1 )
+margin_left = 195.0
+margin_top = 356.0
+margin_right = 515.0
+margin_bottom = 536.0
+rect_scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 3 )
+
+[node name="Blood" type="Sprite" parent="."]
+modulate = Color( 0.407843, 0.407843, 0.407843, 1 )
+position = Vector2( 717, 661 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+
+[node name="KoyNoCode" parent="." instance=ExtResource( 2 )]
+modulate = Color( 0.427451, 0.427451, 0.427451, 1 )
+position = Vector2( 777, 596 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 604, 320 )
+current = true
+zoom = Vector2( 0.4, 0.4 )
+smoothing_enabled = true
+smoothing_speed = 8.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Camera2D"]
+autoplay = "move"
+anims/RESET = SubResource( 18 )
+anims/move = SubResource( 15 )
+
+[node name="PantallaInicial2" type="ColorRect" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+margin_right = 1280.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PantallaInicial2"]
+autoplay = "appear"
+anims/RESET = SubResource( 16 )
+anims/appear = SubResource( 17 )
+
+[node name="Pantallafinal" type="ColorRect" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 3.0
+margin_right = 1280.0
+margin_bottom = 723.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Pantallafinal"]
+anims/RESET = SubResource( 2 )
+anims/appear = SubResource( 3 )

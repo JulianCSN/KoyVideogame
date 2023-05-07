@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/upbeat-documentary-116202.mp3-1dd8bdddbf3cbee2b32375d5b819a86b.mp3str"
+
+[deps]
+
+source_file="res://Sounds/upbeat-documentary-116202.mp3"
+dest_files=[ "res://.import/upbeat-documentary-116202.mp3-1dd8bdddbf3cbee2b32375d5b819a86b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
