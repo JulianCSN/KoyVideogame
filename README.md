@@ -4,7 +4,7 @@ Videogame developed with GDScript using [Godot Engine](https://godotengine.org/)
 
 You can play my Videogame here: https://skitgames.itch.io/koy
 
-## Made by 📬
+## Made by ✏️
 
   * [JulianCSN](https://github.com/JulianCSN) 
 
